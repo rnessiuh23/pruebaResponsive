@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 offset-md-3">
+      <div class="card card-body p-4 text-white" id="editAlum">
+        <h3 class="titulo">Actualizar asignaturas</h3>
+        <form
+          class="formulario"
+          action="/actualizarAsig/{{asignatura._id}}"
+          method="POST"
+        >
+          <div>
+            <label class="dato" for="nombre">Nombre: </label>
+            <input
+              type="text"
+              name="nombre"
+              placeholder="Nombre: "
+              value="{{asignatura.nombre}}"
+              class="form-control text-black"
+            />
+          </div>
+          <br />
+          <div>
+            <label class="dato" for="creditos">Creditos: </label>
+            <input
+              type="number"
+              name="creditos"
+              placeholder="Creditos: "
+              value="{{asignatura.creditos}}"
+              class="form-control text-black"
+            />
+          </div>
+          <br />
+          <div>
+            <label class="dato" for="horas">Horas: </label>
+            <input
+              type="number"
+              name="horas"
+              placeholder="Horas: "
+              value="{{asignatura.horas}}"
+              class="form-control text-black"
+            />
+          </div>
+          <br />
+          <button class="btn btn-success" id="guardar">Guardar cambios!</button>
+          <button class="btn btn-primary" id="volver" href="/">Volver</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="card card-body p-4 text-white" id="editAlum">
+                <h3 class="titulo">Actualizar alumnos</h3>
+                <form class="formulario" action="/actualizarAlum/{{alumno._id}}" method="POST">
+                    <div>
+                        <label class="dato" for="nombre" autofocus>Nombre: </label>
+                        <input type="text" name="nombre" placeholder="Nombre: " value="{{alumno.nombre}}" class="form-control  text-black">
+                    </div>
+                    <br>
+                    <div>
+                        <label class="dato" for="paterno">Primer apellido: </label>
+                        <input type="text" name="paterno" placeholder="Apellido paterno: " value="{{alumno.paterno}}" class="form-control  text-black">
+                    </div>
+                    <br>
+                    <div>
+                        <label class="dato" for="materno">Segundo apellido: </label>
+                        <input type="text" name="materno" placeholder="Apellido materno: " value="{{alumno.materno}}" class="form-control  text-black">
+                    </div>
+                    <br>
+                    <div>
+                        <label class="dato" for="fechaNac">Fecha de nacimiento: </label>
+                        <input type="text" name="fechaNac" placeholder="dd/mm/yyyy: " value="{{alumno.fechaNac}}" class="form-control  text-black">
+                    </div>
+                    <br>
+                    <div>
+                        <label class="dato" for="sexo">Sexo: </label>
+                        <input type="text" name="sexo" placeholder="Masc/Fem " value="{{alumno.sexo}}" class="form-control text-black">
+                    </div>
+                    <br>
+                    <div>
+                        <label class="dato" for="celular">Tel. Celular: : </label>
+                        <input type="text" name="celular" placeholder="Numero: " value="{{alumno.celular}}" class="form-control  text-black">
+                    </div>
+                    <br>
+                    <div>
+                        <label class="dato" for="direccion">Direccion: </label>
+                        <input type="text" name="direccion" placeholder="Ejem: Calle Herrea, No. 32"
+                            value="{{alumno.direccion}}" class="form-control  text-black">
+                    </div>
+                    <br>
+                    <button class="btn btn-success" id="guardar">Guardar cambios!</button>
+                    <button class="btn  btn-primary" id="volver" href="/">Volver</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

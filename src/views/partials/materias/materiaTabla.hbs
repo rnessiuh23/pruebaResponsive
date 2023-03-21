@@ -1,0 +1,57 @@
+{{#if asignatura}}
+  <br />
+  <table class="table table-bordered" id="tabla">
+    <thead>
+      <tr>
+        <th class="dato">Id.</th>
+        <th class="dato">Nombre</th>
+        <th class="dato">Creditos</th>
+        <th class="dato">Horas</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each asignatura}}
+        <tr>
+          <td class="dato2">{{@index}}</td>
+          <td class="dato2">{{nombre}}</td>
+          <td class="dato2">{{creditos}}</td>
+          <td class="dato2">{{horas}}</td>
+          <td class="text-center">
+            {{#if opcion}}
+              <a href="/statusAsig/{{_id}}" class="btn btn-warning">No
+                Disponible</a>
+            {{else}}
+              <a
+                href="/statusAsig/{{_id}}"
+                class="btn btn-success"
+              >Disponible</a>
+            {{/if}}
+          </td>
+          <td class="text-center">
+            <a
+              href="/actualizarAsig/{{_id}}"
+              class="btn btn-info"
+              id="editar"
+            >Editar</a>
+          </td>
+          <td class="text-center">
+            <a
+              href="/eliminarAsig/{{_id}}"
+              class="btn btn-danger"
+              id="eliminar"
+            >Eliminar</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+{{else}}
+  <div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center text-black">
+      <h3>No se han encontrado registros!</h3>
+      <br />
+      <img src="/icons/sinAsignaturas.png" class="w-75" />
+    </div>
+  </div>
+{{/if}}

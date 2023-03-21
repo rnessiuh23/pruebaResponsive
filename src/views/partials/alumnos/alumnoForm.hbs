@@ -1,0 +1,59 @@
+<div class="card card-body p-4 text-white" id="cont">
+    <h3 class="titulo">Alta para alumnos</h3>
+    <form action="/alumno/agregar" method="POST" class="formulario">
+    <br>
+    <div>
+        <label for="nombre" class="dato">Introduzca un nombre: </label>
+        <input type="text" name="nombre" placeholder="Nombre del alumno: " id="nombre"
+        class="form-control text-black" autofocus/>
+    </div>
+    <br>
+    
+    <div>
+        <label for="paterno" class="dato">Apellido paterno: </label>
+        <input type="text" name="paterno" placeholder="Primer apellido: " id="paterno"
+        class="form-control bg-transparent text-black"/>
+    </div>
+    <br>
+    
+    <div>
+        <label for="materno" class="dato">Apellido materno: </label>
+        <input type="text" name="materno" placeholder="Segundo apellido: " id="paterno"
+        class="form-control bg-transparent text-black"/>
+    </div>
+    <br>
+    
+    <div>
+        <label for="" class="dato">Fecha de Nacimiento: </label>
+        <label for="fechanac"> </label>
+        <input type="date" name="fechaNac" placeholder="" id="fechaNac"
+        class="form-control bg-transparent text-black"/>
+        <br>
+    </div>
+    
+    <label for="" class="dato">Seleccione un sexo: </label>
+    <div class="radio">
+        <input type="radio" name="sexo" value="Masculino" id="Masc">
+        <label for="masculino">Masculino</label>
+
+        <input type="radio" name="sexo" value="Femenino" id="Fem">
+        <label for="femenino">Femenino</label>
+    </div>
+    <br>
+    
+    <div>
+        <label for="celular" class="dato">Ingrese Tel. Celular: </label>
+        <input type="text" name="celular" placeholder="(+55) Numero" id="sexo"
+        class="form-control bg-transparent text-black"/>
+    </div>
+    <br>
+    
+    <div>
+        <label for="direccion" class="dato">Ingrese direccion: </label>
+        <input type="text" name="direccion" placeholder="Ej: Calle Herrea, No. 32" id="direccion"
+        class="form-control bg-transparent text-black"/>
+    </div>
+    <br>
+    <button class="btn" id="agr">Agregar</button>
+</form>
+</div>

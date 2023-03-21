@@ -1,0 +1,117 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 offset-md-3">
+      <div class="card card-body p-4 text-white" id="editAlum">
+        <h3 class="titulo">Actualizar profesores</h3>
+        <form
+          class="formulario"
+          action="/actualizarProf/{{profesor._id}}"
+          method="POST"
+        >
+          <div>
+            <label class="dato" for="rfc">RFC: </label>
+            <input
+              type="text"
+              name="rfc"
+              placeholder="RFC: "
+              value="{{profesor.rfc}}"
+              class="form-control text-black"
+            />
+          </div>
+          <br />
+          <div>
+            <label class="dato" for="nombres">Nombres: </label>
+            <input
+              type="text"
+              name="nombres"
+              placeholder="Nombre(s): "
+              value="{{profesor.nombres}}"
+              class="form-control text-black"
+            />
+          </div>
+          <br />
+          <div>
+            <label class="dato" for="paterno">Primer apellido: </label>
+            <input
+              type="text"
+              name="paterno"
+              placeholder="Apellido paterno: "
+              value="{{profesor.paterno}}"
+              class="form-control text-black"
+            />
+          </div>
+          <br />
+          <div>
+            <label class="dato" for="materno">Segundo apellido: </label>
+            <input
+              type="text"
+              name="materno"
+              placeholder="Apellido materno: "
+              value="{{profesor.materno}}"
+              class="form-control text-black"
+            />
+          </div>
+          <br />
+          <div>
+            <label class="dato" for="fechaNacimiento">Fecha de nacimiento:
+            </label>
+            <input
+              type="text"
+              name="fechaNacimiento"
+              placeholder="dd/mm/yyyy: "
+              value="{{profesor.fechaNacimiento}}"
+              class="form-control text-black"
+            />
+          </div>
+          <br />
+          <div>
+            <label class="dato" for="direccion">Direccion: </label>
+            <input
+              type="text"
+              name="direccion"
+              placeholder="Masc/Fem "
+              value="{{profesor.direccion}}"
+              class="form-control text-black"
+            />
+          </div>
+          <br />
+          <div>
+            <label class="dato" for="celular">Tel. Celular: : </label>
+            <input
+              type="text"
+              name="celular"
+              placeholder="Numero: "
+              value="{{profesor.celular}}"
+              class="form-control text-black"
+            />
+          </div>
+          <br />
+          <div>
+            <label class="dato" for="profesion">Profesion: </label>
+            <input
+              type="text"
+              name="profesion"
+              placeholder="Especifique profesion"
+              value="{{profesor.profesion}}"
+              class="form-control text-black"
+            />
+          </div>
+          <br />
+          <div>
+            <label class="dato" for="numeroEmpleado">Ingrese numero de Empleado:
+            </label>
+            <input
+              type="text"
+              name="numeroEmpleado"
+              placeholder="No. Empleado"
+              value="{{profesor.numeroEmpleado}}"
+              class="form-control text-black"
+            />
+          <br />
+          <button class="btn btn-success" id="guardar">Guardar cambios!</button>
+          <button class="btn btn-primary" id="volver" href="/">Volver</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
