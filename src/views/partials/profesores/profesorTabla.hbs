@@ -1,6 +1,6 @@
 {{#if profesor}}
 <br>
-<table class="table table-bordered" id="tabla">
+<table class="table table-bordered" id="tabla2">
     <thead>
         <tr class="text-center">
             <th class="dato">Id.</th>
@@ -30,16 +30,16 @@
             <td class="dato2">{{numeroEmpleado}}</td>
             <td class="text-center">
                 {{#if opcion}}
-                <a href="/statusProf/{{_id}}" class="btn btn-warning" id="baja">No Disponible</a>
+                <a href="/statusProf/{{_id}}" class="btn btn-warning" id="baja">No Disponible <i class="fa-solid fa-xmark"></i></a>
                 {{else}}
-                <a href="/statusProf/{{_id}}" class="btn btn-success" id="ins">Disponible</a>
+                <a href="/statusProf/{{_id}}" class="btn btn-success" id="ins">Disponible <i class="fa-solid fa-check"></i></a>
                 {{/if}}
             </td>
             <td class="text-center">
-            <a href="/actualizarProf/{{_id}}" class="btn btn-info" id="editar">Editar</a>
+            <a href="/actualizarProf/{{_id}}" class="btn btn-info" id="editar">Editar <i class="fa-solid fa-user-gear"></i></a>
           </td>
           <td class="text-center">
-            <a href="/eliminarProf/{{_id}}" class="btn btn-danger" id="eliminar">Eliminar</a>
+            <a href="/eliminarProf/{{_id}}" class="btn btn-danger" id="eliminar">Eliminar <i class="fa-solid fa-trash"></i></a>
           </td>
         </tr>
         {{/each}}

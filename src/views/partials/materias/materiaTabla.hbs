@@ -19,12 +19,12 @@
           <td class="text-center">
             {{#if opcion}}
               <a href="/statusAsig/{{_id}}" class="btn btn-warning">No
-                Disponible</a>
+                Disponible <i class="fa-solid fa-xmark"></i></a>
             {{else}}
               <a
                 href="/statusAsig/{{_id}}"
                 class="btn btn-success"
-              >Disponible</a>
+              >Disponible <i class="fa-solid fa-check"></i></a>
             {{/if}}
           </td>
           <td class="text-center">
@@ -32,14 +32,14 @@
               href="/actualizarAsig/{{_id}}"
               class="btn btn-info"
               id="editar"
-            >Editar</a>
+            >Editar <i class="fa-solid fa-gear"></i></a>
           </td>
           <td class="text-center">
             <a
               href="/eliminarAsig/{{_id}}"
               class="btn btn-danger"
               id="eliminar"
-            >Eliminar</a>
+            >Eliminar <i class="fa-solid fa-trash"></i></a>
           </td>
         </tr>
       {{/each}}
