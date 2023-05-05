@@ -647,7 +647,7 @@ p {
   color: #fff;
 }
 
-@media (max-width: 1700px) {
+@media only screen and (max-width: 720px) and (max-height: 1600px) {
   p {
     padding: 0 50px;
   }
@@ -672,23 +672,49 @@ p {
   }
 
   #head{
-    height: 20vh;
     padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16vh;
+    width: 80%;
+    
   }
 
   .slider{
-    width: auto;
-    height: 10vh;
+    height: 13vh;
   }
+
+  .slider .slide-track{
+    height: 13vh;
+  }
+
+  .slider .slide-track .slide > img{
+    width: 22vh;
+    height: 13vh;
+  } 
 
   #opci{
     height: 50%;
   }
 
-  #subtitulos .title{
-  
+  #subtitulos{
     width: 60%;
-    height: 20%;
+    height: 12vh;
+  }
+
+  #pro{
+    font-size: 30px;
+    width: 95%;
+    height: 3vh;
+  }
+
+  #sub{
+    font-size: 20px;
+  }
+
+  #bton{
+    margin-top: -3%;
   }
 
   #opci2 {
