@@ -566,28 +566,6 @@ p {
   position: center;
 }
 
-@media (max-width: 768px) {
-  p {
-    padding: 0 50px;
-  }
-  .title {
-    margin-bottom: 0px;
-    font-size: 40px;
-  }
-
-  .sau {
-    height: 100vh;
-    padding: 50px 0;
-  }
-  .about {
-    height: 100vh;
-    padding: 50px 0;
-  }
-  .footer-section {
-    display: flex;
-    flex-direction: column;
-  }
-}
 
 #figure {
   margin: 0 7rem;
@@ -667,4 +645,54 @@ p {
 
 #cel {
   color: #fff;
+}
+
+@media (max-width: 1700px) {
+  p {
+    padding: 0 50px;
+  }
+  .title {
+    margin-bottom: 0px;
+    font-size: 40px;
+  }
+
+  .sau {
+    height: 23vh;
+    padding: 50px 0;
+    margin-top: 0;
+  }
+  .about {
+    height: 45vh;
+    padding: 50px 0;
+    margin-top: 0;
+  }
+  .footer-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #head{
+    height: 20vh;
+    padding: 50px 0;
+  }
+
+  .slider{
+    width: auto;
+    height: 10vh;
+  }
+
+  #opci{
+    height: 50%;
+  }
+
+  #subtitulos .title{
+  
+    width: 60%;
+    height: 20%;
+  }
+
+  #opci2 {
+    height: 14%;
+  }
+  
 }
