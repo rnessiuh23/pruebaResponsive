@@ -647,7 +647,7 @@ p {
   color: #fff;
 }
 
-@media only screen and (max-width: 720px) and (max-height: 1600px) {
+@media only screen and (max-width: 800px) and (max-height: 1800px) {
   p {
     padding: 0 50px;
   }
@@ -664,12 +664,12 @@ p {
   }
 
   #funcion{
-    margin-top: 190px;
+    margin-top: 32%;
     width: 100%;
   }
 
   #opc{
-    font-size: 30px;
+    font-size: 25px;
   }
 
   #opci{
@@ -677,7 +677,7 @@ p {
   }
 
   #opci > p{
-    font-size: 15px;
+    font-size: 13px;
   }
 
   .footer-section {
@@ -715,7 +715,7 @@ p {
   }
 
   #pro{
-    font-size: 30px;
+    font-size: 25px;
     width: 95%;
     height: 3vh;
   }
@@ -735,6 +735,27 @@ p {
 
   #opci2 {
     height: 14%;
+  }
+
+  nav{
+    width: 95%;
+  }
+  
+  .menu-horizontal > li{
+    width: 28%;
+  }
+
+  .menu-horizontal > li > a {
+    display: block;
+    padding: 10px 20px;
+    color: white; /*Esto es el color de la letra*/
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .menu-horizontal > li:hover {
+    background: linear-gradient(180deg, #67b108 0%, #82d616 100%);
+    transition: all 0.3s;
+    width: 28%;
   }
   
 }
