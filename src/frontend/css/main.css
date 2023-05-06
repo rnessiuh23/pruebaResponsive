@@ -664,12 +664,12 @@ p {
   }
 
   #funcion{
-    margin-top: 40%;
+    margin-top: 5%;
     width: 100%;
   }
 
   #funcion2{
-    margin-top: 130%;
+    margin-top: 95%;
     width: 100%;
   }
 
@@ -711,12 +711,13 @@ p {
   }
 
   .slider .slide-track{
-    height: 23vh;
+    width: 20vh;
+    height: 15vh;
   }
 
   .slider .slide-track .slide > img{
-    width: 37vh;
-    height: 23vh;
+    width: 20vh;
+    height: 15vh;
   } 
 
   #subtitulos{
@@ -786,7 +787,17 @@ p {
   }
 
   #opci2 {
-    height: 14%;
+    background-color: #15803d;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  #opci2 .title {
+    color: #ffbf35;
+    font-family: monospace;
+    font-style: italic;
+    margin-top: 1%;
+    font-size: 25px;
   }
 
   nav{
@@ -807,7 +818,35 @@ p {
   .menu-horizontal > li:hover {
     background: linear-gradient(180deg, #67b108 0%, #82d616 100%);
     transition: all 0.3s;
-    width: 28%;
+    width: 29%;
+  }
+
+  .box-container2 .box {
+    width: 315px;
+    height: 300px;
+    padding-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    background: #15803d;
+    margin: 20px 20px;
+    border-radius: 8%;
+    margin-top: 3%;
   }
   
+  .box-container2 .box img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%; /*Esto nos srive para hacer los fondos un poco mas redondos*/
+    margin-top: -18px;
+    border: 6px solid #eab308;
+  }
+  
+  
+  .box-container2 .box p {
+    font-size: 13px;
+    color: #fff;
+    padding: 0;
+    margin: 6px;
+  }
 }
