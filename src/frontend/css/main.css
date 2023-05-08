@@ -4,7 +4,6 @@ body {
   background-size: 100%;
   background-attachment: fixed;
   position: relative;
-  overflow-x: hidden;
 }
 
 .bg-black {
@@ -314,7 +313,7 @@ p {
 }
 
 .content {
-  height: 50vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -882,13 +881,20 @@ p {
     height: auto; /* ajusta la altura al contenido */
   }
   
+  #phone{
+    order: 3;
+    margin-top: 30px;
+    margin-left: -120px;
+  }
+  
   #figure{
     margin-top: 10px;
-    margin-right: 300px;
+    margin-left: -40px;
   }
 
   #redes{
-    margin-right: 200px;
+    margin-top: 40px;
+    margin-left: -205px;
   }
 
   #phone > p{
