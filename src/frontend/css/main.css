@@ -575,11 +575,6 @@ p {
   position: center;
 }
 
-
-#figure {
-  margin: 0 8rem;
-}
-
 :root {
   --facebook: #3b5999;
   --instagram: #e4405f;
@@ -873,7 +868,8 @@ p {
   .redes-container {
     display: flex;
     flex-direction: column;
-    max-width: 500px; /* establece un ancho máximo */
+    max-width: 600px; /* establece un ancho máximo */
+    margin-left: -45px;
   }
   
   #phone, #redes, #figure {
@@ -889,12 +885,12 @@ p {
   
   #figure{
     margin-top: 10px;
-    margin-left: -60px;
+    margin-left: -125px;
   }
 
   #redes{
     margin-top: 40px;
-    margin-left: -215px;
+    margin-left: -165px;
   }
 
   #phone > p{
