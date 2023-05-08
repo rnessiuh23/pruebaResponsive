@@ -4,6 +4,7 @@ body {
   background-size: 100%;
   background-attachment: fixed;
   position: relative;
+  overflow-x: hidden;
 }
 
 .bg-black {
@@ -870,52 +871,32 @@ p {
     margin: 6px;
   }
 
-  .content {
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   .redes-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     max-width: 500px; /* establece un ancho máximo */
   }
   
-  #figure {
+  #phone, #redes, #figure {
     width: 90%; /* ocupa el ancho completo del contenedor padre */
     height: auto; /* ajusta la altura al contenido */
   }
   
   #figure{
     margin-top: 10px;
-    margin-left: -160px;
-    margin-right: 20px;
-  }
-  
-  #redes{
-    width: 100%;
-    margin-left: -220px;
+    margin-right: 300px;
   }
 
-  #phone{
-    width: 100%;
-    height: auto;
-    margin-top: 20px;
-    margin-right: 20px;
-    margin-left: -70px;
+  #redes{
+    margin-right: 200px;
   }
-  
+
   #phone > p{
     font-size: 22px;
   }
-  
+
   #figure .img > img{
     width: 210px;
     height: 180px;
   }
-  
 }
