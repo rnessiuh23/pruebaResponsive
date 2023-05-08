@@ -924,4 +924,9 @@ p {
   #contacto{
     margin-left: 30px;
   }
+
+  body {
+    background-image: none;
+    background-color: white;
+  }
 }
