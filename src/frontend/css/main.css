@@ -941,10 +941,22 @@ p {
 }
 
 
-@media only screen and (max-width: 500px) and (max-height: 900px) {
+@media only screen and (max-width: 600px) and (max-height: 1100px) {
 
   nav{
     width: 90vw;
+  }
+
+  .menu-horizontal > li > a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  #pro{
+    font-size: 24px;
+    width: 70vw;
+    height: 3vh;
   }
 
   #funcion {
@@ -968,7 +980,26 @@ p {
     flex-direction: column;
     align-items: center;
     width: 100vw;
-  }  
+  }
+
+  .contact{
+    padding: 50px 0;
+    margin-top: -5%;
+    width: 100vw;
+    height: 61vh;
+  }
+
+  #contacto{
+    margin-left: 0;
+    font-size: 30px;
+  }
+  
+  #phone{
+    order: 3;
+    margin-top: 30px;
+    margin-left: -100px;
+    height: 12vh;
+  }
 } 
 
 /*Queries para pantallas pequeñas*/
@@ -977,6 +1008,12 @@ p {
 
   nav{
     width: 90vw;
+  }
+
+  .menu-horizontal > li > a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 10px;
   }
 
   #subtitulos .btn{
