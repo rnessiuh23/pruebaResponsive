@@ -1089,7 +1089,7 @@ p {
   }
 
   #opci2{
-    height: 11vh;
+    height: 18vh;
   }
 
   #sop{
@@ -1174,14 +1174,14 @@ p {
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    padding: 21vh 0 80vh 0;
+    padding: 16vh 0 80vh 0;
   }
   
   #funcion2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5vh 0 70vh 0;
+    padding: 10vh 0 70vh 0;
     
   }
   
@@ -1189,7 +1189,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5vh 0 0 0;
+    padding: 10vh 0 0 0;
   }  
 }
 
