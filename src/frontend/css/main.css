@@ -1089,7 +1089,8 @@ p {
   }
 
   #opci2{
-    height: 18vh;
+    height: 16vh;
+    margin-top: 3vh;
   }
 
   #sop{
@@ -1118,7 +1119,6 @@ p {
     background: #15803d;
     margin: 20px 20px;
     border-radius: 8%;
-    margin-top: 3%;
   }
 
   .box-container2 .box p {
@@ -1131,6 +1131,7 @@ p {
   #contactoTit{
     width: 100vw;
     height: 9vh;
+    margin-top: 2vh;
   }
 
   #contacto{
