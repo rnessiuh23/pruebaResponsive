@@ -1011,6 +1011,10 @@ p {
     height: 45px;
     text-align: center;
   }
+
+  .redes-container ul li a {
+    background-color: #e91e63;
+  }
   
   .cen{
     margin: 0;
@@ -1156,6 +1160,10 @@ p {
     order: 3;
     margin-top: 15px;
     margin-left: -10px;
+  }
+
+  .redes-container ul li a {
+    background-color: #38bdf8;
   }
 
   #redes{
@@ -1332,6 +1340,7 @@ p {
 .redes-container ul li a {
   font-size: 15px;
   line-height: 35px;
+  background-color: #eab308;
 }
 
 #figure{
@@ -1522,6 +1531,10 @@ p {
     margin-top: 45%;
     margin-left: 45px;
     width: 89%;
+  }
+
+  .redes-container ul li a {
+    background-color: red;
   }
 
 } 
