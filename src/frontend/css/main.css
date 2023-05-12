@@ -1200,6 +1200,66 @@ p {
   }  
 }
 
+
+@media only screen and (max-width: 400px) and (max-height: 800px) {
+
+.box-container2 .box {
+    width: 309px;
+    height: 300px;
+}
+
+.redes-container{
+  margin-top: 5%;
+  margin-left: -55%;
+}
+
+#funcion{
+  margin-bottom: 26%;
+}
+
+#funcion3{
+  margin-top: 25%;
+}
+
+.contact {
+  padding: 50px 0;
+  
+  width: 100vw;
+  height: 50vh;
+}
+
+#redes {
+  width: 100%;
+  margin-left: -9%;
+}
+
+.redes-container ul li {
+  width: 40px;
+  height: 45px;
+}
+
+.redes-container ul li a {
+  line-height: 40px;
+  font-size: 17px;
+}
+
+#contacto{
+  font-size: 22px;
+  margin-left: 0%;
+}
+
+#figure{
+  margin-left: 4%;
+}
+
+#phone{
+  margin-left: 3%;
+}
+
+}
+
+
+
 @media only screen and (max-width: 380px) and (max-height: 700px){
 
 #head{
@@ -1323,7 +1383,7 @@ p {
 .redes-container{
   display: flex;
   flex-direction: column;
-  margin-left: -78%;
+  margin-left: -85%;
   margin-top: -60%;
 }
 
@@ -1371,6 +1431,14 @@ p {
 }
 }
 
+@media only screen and (max-width: 330px) and (max-height: 650px){
+
+  .redes-container{
+    margin-left: -85%;
+  }
+
+}
+
 @media only screen and (max-width: 380px) and (max-height: 600px){
 
 #funcion{
@@ -1413,6 +1481,10 @@ p {
   width: 75%;
   margin-left: 28%;
 }
+
+.redes-container ul li a {
+    background-color: #82d616;
+  }
 
 }
 
