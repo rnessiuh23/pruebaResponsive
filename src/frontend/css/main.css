@@ -941,11 +941,175 @@ p {
   }
 }
 
+@media only screen and (max-width: 950px) and (max-height: 400px) {
+
+  nav{
+    margin-top: -3%;
+  }
+
+  #head {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 100vw;
+    margin-top: 2%;
+  }
+
+  #pro {
+    margin-top: -2%;
+    font-size: 33px;
+    width: 70vw;
+    height: 3vh;
+  }
+
+  #sub {
+    font-size: 25px;
+    margin-left: 10%;
+    margin-top: 0%;
+  }
+
+  #subtitulos .btn {
+    width: 12%;
+    height: 55%;
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 1%;
+  }
+
+  .slider {
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+  }
+
+  .slider .slide-track {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .slider .slide {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .slider .slide-track .slide > img {
+    width: 45vw;
+    height: 50vh;
+  }
+
+  #opci {
+    height: 25%;
+  }
+  
+  #opci .title {
+    margin-top: 1%;
+    padding: 11px;
+  }
+
+  #funcion{
+    width: 100vw;
+    margin-top: -15%;
+    margin-bottom: 3%;
+  }
+
+  #opci2 {
+    width: 100%;
+    height: 20vh;
+    margin-top: -2%;
+  }
+
+  #datosP {
+    margin-top: 1%;
+    font-size: 25px;
+    padding: 11px;
+  }
+
+  .box-container2 .box {
+    width: 285px;
+    height: 290px;
+    padding-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    margin: 20px 20px;
+    border-radius: 8%;
+    margin-top: 3%;
+  }
+
+  .box-container2 .box p {
+    font-size: 13px;
+    padding: 0 20px;
+    margin: 6px;
+  }
+
+  #funcion2{
+    margin-bottom: 50%;
+  }
+
+  #funcion3 {
+    width: 100vw;
+    margin-top: -15%;
+  }
+
+  #contactoTit {
+    width: 100vw;
+    height: 20vh;
+  }
+
+  #redes {
+    margin-top: -8%;
+    margin-left: -18%;
+    width: 85%;
+  }
+
+  #figure {
+    margin-top: 3%;
+    margin-left: -13%;
+    width: 40%;
+}
+
+  .redes-container {
+    margin-left: -6%;
+    margin-top: 7%;
+    width: 85%;
+  }
+
+  .redes-container ul li {
+    display: inline-block;
+    margin: 0 5px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+  }
+
+  .contact {
+    padding: 50px 0;
+    background: #171717;
+    margin-top: -2%;
+    width: 100vw;
+    height: 110vh;
+  }
+
+  #phone {
+    margin-top: 3%;
+    margin-left: -4%;
+    height: 50%;
+    width: 45%;
+  }
+
+}
+
 
 @media only screen and (max-width: 550px) and (max-height: 1100px) {
 
   nav{
     width: 90vw;
+    margin-top: -6%;
   }
 
   .menu-horizontal > li > a {
@@ -960,12 +1124,23 @@ p {
     height: 3vh;
   }
 
+  .box-container2 .box p {
+    font-size: 13px;
+    padding: 0 22px;
+    margin: 7px;
+  }
+
+  #opci > p {
+    font-size: 13px;
+    text-align: justify;
+  }
+
   #funcion {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    padding: 18vh 0 60vh 0;
+    margin-bottom: -6%;
   }
   
   #funcion2 {
@@ -973,7 +1148,7 @@ p {
     flex-direction: column;
     align-items: center;
     width: 100vw;
-    padding: 0 0 48vh 0;
+    
   }
   
   #funcion3 {
@@ -981,6 +1156,7 @@ p {
     flex-direction: column;
     align-items: center;
     width: 100vw;
+    margin-top: 87%;
   }
 
   .contact{
@@ -999,10 +1175,16 @@ p {
   }
 
   #redes {
-    margin-top: -35px;
-    margin-left: -165px;
-    width: 50vh;
+    margin-top: -8%;
+    margin-left: -25%;
+    width: 110%;
   }
+
+  .redes-container {
+    margin-left: -32%;
+    margin-top: -5%;
+    width: 85%;
+}
 
   .redes-container ul li {
     display: inline-block;
@@ -1022,15 +1204,30 @@ p {
 
   #phone{
     order: 3;
-    width: 41vh;
-    margin-top: 30px;
-    margin-left: -100px;
-    height: 12vh;
+    width: 99%;
+    margin-top: 9%;
+    margin-left: 5%;
   }
 
+  #opci2 {
+    margin-top: -12%;
+    height: 8vh;
+}
+
+  #datosP {
+    padding: 3%;
+    font-size: 25px;
+}
+
   #figure{
-    margin-top: 2vh;
+    margin-top: 5%;
+    margin-left: -13%;
   }
+
+  #figure .img > img {
+    width: 230px;
+    height: 190px;
+}
 
 } 
 
@@ -1258,8 +1455,6 @@ p {
 
 }
 
-
-
 @media only screen and (max-width: 380px) and (max-height: 700px){
 
 #head{
@@ -1429,6 +1624,14 @@ p {
   width: 100vw;
   margin-top: 35%;
 }
+}
+
+@media only screen and (max-width: 365px) and (max-height: 700px){
+
+  .redes-container{
+    margin-left: -78%;
+  }
+
 }
 
 @media only screen and (max-width: 330px) and (max-height: 650px){
