@@ -345,8 +345,8 @@ p {
 #opci2 {
   background-color: #15803d;
   width: 100%;
-  height: 40%;
-  margin-top: 0;
+  height: 14%;
+  margin-top: -10%;
 }
 
 #datosP {
@@ -354,6 +354,8 @@ p {
   font-family: monospace;
   font-style: italic;
   margin-top: 1%;
+  font-size: 38px;
+  padding: 10px 0;
 }
 
 #op {
@@ -426,7 +428,7 @@ p {
   padding: 50px 0;
   background-color: /*#303030*/ rgba(255, 255, 255);
   width: 100%;
-  height: 44em;
+  height: 55em;
 }
 
 #inf {
@@ -441,6 +443,7 @@ p {
   justify-content: center;
   padding-top: 50px;
   flex-wrap: wrap; /*Esto es lo que hace que un elemento sea responsive y por lo tanto se adapte a la pantalla*/
+  margin-top: 1%;
 }
 
 .box-container2 .box {
@@ -472,7 +475,7 @@ p {
 .box-container2 .box p {
   font-size: 18px;
   color: #fff;
-  padding: 0;
+  padding: 0 30px;
 }
 
 .box-container2 .box .stars i {
@@ -483,12 +486,14 @@ p {
   padding: 50px 0;
   background: #171717;
   margin-top: -75px;
+  height: 55vh;
 }
 
 #contacto {
   font-size: 32px;
   color: #f97316;
   font-family: monospace;
+  margin-top: 2%;
 }
 
 #contactoTit {
@@ -497,6 +502,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -4%;
 }
 
 #redes {
@@ -597,7 +603,7 @@ p {
   justify-content: center;
   margin-right: -190px;
   margin-left: -20px;
-  margin-top: 10px;
+  margin-top: -3%;
 }
 
 
@@ -818,7 +824,7 @@ p {
   #opci2 {
     background-color: #15803d;
     width: 100%;
-    margin-top: 0;
+    margin-top: 1%;
   }
 
   #datosP {
@@ -932,7 +938,7 @@ p {
 
   #contactoTit {
     width: 100vw;
-    height: 8vh;
+    height: 10vh;
   }
 
   body {
@@ -1398,6 +1404,33 @@ p {
 }
 
 
+@media only screen and (max-width: 400px) and (max-height: 860px) {
+
+
+  .redes-container{
+    margin-left: -35%;
+    margin-top: 5%;
+  }
+
+  #redes {
+    margin-top: -8%;
+    margin-left: -25%;
+    width: 120%;
+  }
+
+  #phone {
+    margin-top: 7%;
+    margin-left: -7%;
+  }
+
+  #contactoTit {
+    margin-top: 5%;
+  }
+
+}
+
+
+
 @media only screen and (max-width: 400px) and (max-height: 800px) {
 
 .box-container2 .box {
@@ -1449,7 +1482,7 @@ p {
   margin-left: 0%;
 }
 
-#contatcoTit{
+#contactoTit{
   margin-top: 27%;
 }
 
@@ -1635,21 +1668,6 @@ p {
 }
 }
 
-@media only screen and (max-width: 365px) and (max-height: 700px){
-
-  .redes-container{
-    margin-left: -78%;
-  }
-
-}
-
-@media only screen and (max-width: 330px) and (max-height: 650px){
-
-  .redes-container{
-    margin-left: -85%;
-  }
-
-}
 
 @media only screen and (max-width: 380px) and (max-height: 600px){
 
@@ -1696,6 +1714,22 @@ p {
 
 .redes-container ul li a {
     background-color: #82d616;
+  }
+
+}
+
+@media only screen and (max-width: 365px) and (max-height: 700px){
+
+  .redes-container{
+    margin-left: -78%;
+  }
+
+}
+
+@media only screen and (max-width: 330px) and (max-height: 650px){
+
+  .redes-container{
+    margin-left: -85%;
   }
 
 }
