@@ -1570,12 +1570,12 @@ p {
 }
 
 #opci2{
-  height: 35%;
+  height: 30%;
 }
 
 #datosP {
   font-size: 19px;
-  padding: 1%;
+  margin: 3% 0;
 }
 
 .box-container2 .box {
@@ -1703,13 +1703,13 @@ p {
 
 #redes {
   margin-top: 45%;
-  margin-left: 45px;
-  width: 89%;
+  margin-left: 22%;
+  width: 120%;
 }
 
 #phone{
-  width: 75%;
-  margin-left: 28%;
+  width: 95%;
+  margin-left: 30%;
 }
 
 .redes-container ul li a {
@@ -1730,6 +1730,7 @@ p {
 
   .redes-container{
     margin-left: -85%;
+    margin-top: -36%;
   }
 
 }
