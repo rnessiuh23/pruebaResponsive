@@ -1,12 +1,29 @@
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.2/css/dataTables.bootstrap5.min.css">
+<script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.2/js/dataTables.bootstrap5.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+      $('#tabla-asignaturas').DataTable({
+        "scrollY": "800px",
+        "scrollCollapse": true,
+        "paging": true,
+      });
+    });
+</script>
+
 {{#if asignatura}}
   <br />
-  <table class="table table-bordered" id="tabla">
+  <div class="table-responsive"></div>
+  <table class="table table-bordered" id="tabla-asignaturas">
     <thead>
-      <tr>
+      <tr class="text-center">
         <th class="dato">Id.</th>
         <th class="dato">Nombre</th>
         <th class="dato">Creditos</th>
         <th class="dato">Horas</th>
+        <th class="dato">Status</th>
+        <th class="dato" colspan="2">Opciones</th>
       </tr>
     </thead>
     <tbody>
@@ -31,21 +48,19 @@
             <a
               href="/actualizarAsig/{{_id}}"
               class="btn btn-info"
-              id="editar"
-            >Editar <i class="fa-solid fa-gear"></i></a>
+              id="editar"><i class="fa-solid fa-gear"></i></a>
           </td>
           <td class="text-center">
             <a
               href="/eliminarAsig/{{_id}}"
               class="btn btn-danger"
-              id="eliminar"
-            >Eliminar <i class="fa-solid fa-trash"></i></a>
+              id="eliminar"><i class="fa-solid fa-trash"></i></a>
           </td>
         </tr>
       {{/each}}
     </tbody>
   </table>
-
+</div>
 {{else}}
   <div class="h-100 d-flex align-items-center justify-content-center">
     <div class="text-center text-black">

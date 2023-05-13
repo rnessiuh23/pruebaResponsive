@@ -709,6 +709,14 @@ p {
     width: 100vw;
   }  
 
+  #Colum{
+  background-color: #17ad37;
+  }
+
+  #Colum > th{
+    color: #fff;
+  }
+
   #opc{
     font-size: 25px;
   }
@@ -1709,7 +1717,13 @@ p {
 
 #phone{
   width: 95%;
+  margin-left: 31%;
+}
+
+#figure {
+  margin-top: -1%;
   margin-left: 30%;
+  width: 75%;
 }
 
 .redes-container ul li a {

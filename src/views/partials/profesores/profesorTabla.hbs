@@ -1,57 +1,75 @@
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.2/css/dataTables.bootstrap5.min.css">
+<script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.2/js/dataTables.bootstrap5.min.js"></script>
+
+<script>
+  $(document).ready(function() {
+    $('#tabla-profesores').DataTable({
+      "scrollY": "800px",
+      "scrollCollapse": true,
+      "paging": false
+    });
+  });
+</script>
+
 {{#if profesor}}
 <br>
-<table class="table table-bordered" id="tabla">
-    <thead>
-        <tr class="text-center">
-            <th class="dato">Id.</th>
-            <th class="dato">RFC</th>
-            <th class="dato">Nombres</th>
-            <th class="dato">Primer apellido</th>
-            <th class="dato">Segundo apellido</th>
-            <th class="dato">Fecha Nacimiento</th>
-            <th class="dato">Direccion</th>  
-            <th class="dato">Celular</th>
-            <th class="dato">Profesion</th>
-            <th class="dato">No. Empleado</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each profesor}}
-        <tr>
-            <td class="dato2">{{@index}}</td>
-            <td class="dato2">{{rfc}}</td>
-            <td class="dato2">{{nombres}}</td>
-            <td class="dato2">{{paterno}}</td>
-            <td class="dato2">{{materno}}</td>
-            <td class="dato2">{{fechaNacimiento}}</td>
-            <td class="dato2">{{direccion}}</td>
-            <td class="dato2">{{celular}}</td>
-            <td class="dato2">{{profesion}}</td>
-            <td class="dato2">{{numeroEmpleado}}</td>
-            <td class="text-center">
-                {{#if opcion}}
-                <a href="/statusProf/{{_id}}" class="btn btn-warning" id="baja">No Disponible <i class="fa-solid fa-xmark"></i></a>
-                {{else}}
-                <a href="/statusProf/{{_id}}" class="btn btn-success" id="ins">Disponible <i class="fa-solid fa-check"></i></a>
-                {{/if}}
-            </td>
-            <td class="text-center">
-            <a href="/actualizarProf/{{_id}}" class="btn btn-info" id="editar">Editar <i class="fa-solid fa-user-gear"></i></a>
-          </td>
-          <td class="text-center">
-            <a href="/eliminarProf/{{_id}}" class="btn btn-danger" id="eliminar">Eliminar <i class="fa-solid fa-trash"></i></a>
-          </td>
-        </tr>
-        {{/each}}
-    </tbody>
+<div class="table-responsive">
+<table class="table table-bordered" id="tabla-profesores">
+  <thead>
+    <tr class="text-center">
+      <th class="dato">Id.</th>
+      <th class="dato">RFC</th>
+      <th class="dato">Nombres</th>
+      <th class="dato">Primer apellido</th>
+      <th class="dato">Segundo apellido</th>
+      <th class="dato">Fecha Nacimiento</th>
+      <th class="dato">Direccion</th>
+      <th class="dato">Celular</th>
+      <th class="dato">Profesion</th>
+      <th class="dato">No. Empleado</th>
+      <th class="dato">Status</th>
+      <th class="dato" colspan="2">Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each profesor}}
+    <tr>
+      <td class="dato2">{{@index}}</td>
+      <td class="dato2">{{rfc}}</td>
+      <td class="dato2">{{nombres}}</td>
+      <td class="dato2">{{paterno}}</td>
+      <td class="dato2">{{materno}}</td>
+      <td class="dato2">{{fechaNacimiento}}</td>
+      <td class="dato2">{{direccion}}</td>
+      <td class="dato2">{{celular}}</td>
+      <td class="dato2">{{profesion}}</td>
+      <td class="dato2 text-center">{{numeroEmpleado}}</td>
+      <td class="text-center">
+        {{#if opcion}}
+        <a href="/statusProf/{{_id}}" class="btn btn-warning" id="baja">No Disponible <i class="fa-solid fa-xmark"></i></a>
+        {{else}}
+        <a href="/statusProf/{{_id}}" class="btn btn-success" id="ins">Disponible <i class="fa-solid fa-check"></i></a>
+        {{/if}}
+      </td>
+      <td class="text-center">
+        <a href="/actualizarProf/{{_id}}" class="btn btn-info" id="editar"><i class="fa-solid fa-user-gear"></i></a>
+      </td>
+      <td class="text-center">
+        <a href="/eliminarProf/{{_id}}" class="btn btn-danger" id="eliminar"><i class="fa-solid fa-trash"></i></a>
+      </td>
+      </tr>
+      {{/each}}
+  </tbody>
 </table>
-
+</div>
 {{else}}
-  <div class="h-100 d-flex align-items-center justify-content-center">
-    <div class="text-center text-black">
-      <h3>No se han encontrado registros!</h3>
-      <br>
-      <img src="/icons/sinProfesores.png" class="w-75"/>
-    </div>
+
+<div class="h-100 d-flex align-items-center justify-content-center">
+  <div class="text-center text-black">
+    <h3>No se han encontrado registros!</h3>
+    <br>
+    <img src="/icons/sinProfesores.png" class="w-75"/>
   </div>
+</div>
 {{/if}}
