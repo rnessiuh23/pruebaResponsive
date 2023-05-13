@@ -1651,6 +1651,7 @@ p {
 
 #funcion2{
   width: 100vw;
+  margin-bottom: 100%;
 }
 
 #funcion3{
@@ -1670,18 +1671,31 @@ p {
 .redes-container {
   display: flex;
   flex-direction: column;
-  margin-left: -75%;
-  margin-top: -45%;
+  margin-left: -80%;
+  margin-top: -10%;
+}
+
+#contactoTit{
+  margin-top: 35%;
+  width: 100vw;
+  height: 9vh;
+}
+
+.contact {
+    padding: 50px 0;
+    margin-top: -3%;
+    width: 100vw;
+    height: 70vh;
 }
 
 #redes {
-  margin-top: 45%;
-  margin-left: 45px;
-  width: 89%;
+  margin-top: 5%;
+  margin-left: 16%;
+  width: 115%;
 }
 
 #phone{
-  width: 75%;
+  width: 88%;
   margin-left: 28%;
 }
 
