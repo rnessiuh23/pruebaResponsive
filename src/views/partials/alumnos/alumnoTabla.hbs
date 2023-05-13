@@ -1,47 +1,64 @@
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.2/css/dataTables.bootstrap5.min.css">
+<script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.2/js/dataTables.bootstrap5.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+      $('#tabla').DataTable({
+        "scrollY": "800px",
+        "scrollCollapse": true,
+        "paging": true,
+      });
+    });
+</script>
+
 {{#if alumno}}
   <br />
-  <table class="table table-bordered" id="tabla">
-    <thead>
-      <tr class="text-center">
-        <th class="dato">Id.</th>
-        <th class="dato">Nombre: </th>
-        <th class="dato">Primer apellido</th>
-        <th class="dato">Segundo apellido</th>
-        <th class="dato">Fecha Nacimiento</th>
-        <th class="dato">Sexo</th>
-        <th class="dato">Celular</th>
-        <th class="dato">Direccion</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each alumno}}
-        <tr>
-          <td class="dato2">{{@index}}</td>
-          <td class="dato2">{{nombre}}</td>
-          <td class="dato2">{{paterno}}</td>
-          <td class="dato2">{{materno}}</td>
-          <td class="dato2">{{fechaNac}}</td>
-          <td class="dato2">{{sexo}}</td>
-          <td class="dato2">{{celular}}</td>
-          <td class="dato2">{{direccion}}</td>
-          <td class="text-center">
-            {{#if opcion}}
-              <a href="/statusAlum/{{_id}}" class="btn btn-warning" id="baja">Baja <i class="fa-solid fa-xmark"></i></a>
-            {{else}}
-              <a href="/statusAlum/{{_id}}" class="btn btn-success" id="ins">Inscrito <i class="fa-solid fa-check"></i></a>
-            {{/if}}
-          </td>
-          <td class="text-center">
-            <a href="/actualizarAlum/{{_id}}" class="btn btn-info" id="editar">Editar <i class="fa-solid fa-user-gear"></i></a>
-          </td>
-          <td class="text-center">
-            <a href="/eliminarAlum/{{_id}}" class="btn btn-danger" id="eliminar">Eliminar <i class="fa-solid fa-trash"></i></a>
-          </td>
+  <div class="table-responsive">
+    <table class="table table-bordered" id="tabla">
+      <thead>
+        <tr class="text-center">
+          <th class="dato">Id.</th>
+          <th class="dato">Nombre: </th>
+          <th class="dato">Primer apellido</th>
+          <th class="dato">Segundo apellido</th>
+          <th class="dato">Fecha Nacimiento</th>
+          <th class="dato">Sexo</th>
+          <th class="dato">Celular</th>
+          <th class="dato">Direccion</th>
+          <th class="dato">Status</th>
+          <th class="dato" colspan="2">Opciones</th>
         </tr>
-      {{/each}}
-    </tbody>
-  </table>
-
+      </thead>
+      <tbody>
+        {{#each alumno}}
+          <tr>
+            <td class="dato2">{{@index}}</td>
+            <td class="dato2">{{nombre}}</td>
+            <td class="dato2">{{paterno}}</td>
+            <td class="dato2">{{materno}}</td>
+            <td class="dato2">{{fechaNac}}</td>
+            <td class="dato2">{{sexo}}</td>
+            <td class="dato2">{{celular}}</td>
+            <td class="dato2">{{direccion}}</td>
+            <td>
+              {{#if opcion}}
+                <a href="/statusAlum/{{_id}}" class="btn btn-warning" id="baja">Baja <i class="fa-solid fa-xmark"></i></a>
+              {{else}}
+                <a href="/statusAlum/{{_id}}" class="btn btn-success" id="ins">Inscrito <i class="fa-solid fa-check"></i></a>
+              {{/if}}
+            </td>
+            <td class="text-center">
+              <a href="/actualizarAlum/{{_id}}" class="btn btn-info" id="editar"><i class="fa-solid fa-user-gear"></i></a>
+            </td>
+            <td>
+              <a href="/eliminarAlum/{{_id}}" class="btn btn-danger" id="eliminar"><i class="fa-solid fa-trash"></i></a>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
 {{else}}
   <div class="h-100 d-flex align-items-center justify-content-center">
     <div class="text-center text-black">
