@@ -5,35 +5,38 @@
     <div>
         <label for="nombre" class="dato">Introduzca un nombre: </label>
         <input type="text" name="nombre" placeholder="Nombre del alumno: " id="nombre"
-        class="form-control text-black" autofocus required/>
+        class="form-control text-black" autofocus/>
+        <span id="nombreError" class="text-danger"></span>
     </div>
     <br>
     
     <div>
         <label for="paterno" class="dato">Apellido paterno: </label>
         <input type="text" name="paterno" placeholder="Primer apellido: " id="paterno"
-        class="form-control bg-transparent text-black" required/>
+        class="form-control bg-transparent text-black"/>
+        <span id="paternoError" class="text-danger"></span>
     </div>
     <br>
     
     <div>
         <label for="materno" class="dato">Apellido materno: </label>
-        <input type="text" name="materno" placeholder="Segundo apellido: " id="paterno"
-        class="form-control bg-transparent text-black" required/>
+        <input type="text" name="materno" placeholder="Segundo apellido: " id="materno"
+        class="form-control bg-transparent text-black"/>
+        <span id="maternoError" class="text-danger"></span>
     </div>
     <br>
     
     <div>
         <label for="" class="dato">Fecha de Nacimiento: </label>
-        <label for="fechanac"> </label>
+        <label for="fechaNac"> </label>
         <input type="date" name="fechaNac" placeholder="" id="fechaNac"
-        class="form-control bg-transparent text-black" required/>
+        class="form-control bg-transparent text-black"/>
         <br>
     </div>
     
     <label for="" class="dato">Seleccione un sexo: </label>
     <div class="radio">
-        <input type="radio" name="sexo" value="Masculino" id="Masc" required>
+        <input type="radio" name="sexo" value="Masculino" id="Masc">
         <label for="masculino">Masculino</label>
 
         <input type="radio" name="sexo" value="Femenino" id="Fem">
@@ -43,17 +46,210 @@
     
     <div>
         <label for="celular" class="dato">Ingrese Tel. Celular: </label>
-        <input type="text" name="celular" placeholder="(+55) Numero" id="sexo"
-        class="form-control bg-transparent text-black" required/>
+        <input type="text" name="celular" placeholder="(+55) Numero" id="celular"
+        class="form-control bg-transparent text-black"/>
+        <span id="celularError" class="text-danger"></span>
     </div>
     <br>
     
     <div>
         <label for="direccion" class="dato">Ingrese direccion: </label>
         <input type="text" name="direccion" placeholder="Ej: Calle Herrea, No. 32" id="direccion"
-        class="form-control bg-transparent text-black" required/>
+        class="form-control bg-transparent text-black"/>
+        <span id="direccionError" class="text-danger"></span>
     </div>
     <br>
     <button class="btn" id="agr">Agregar <i class="fa-solid fa-user-check"></i></button>
 </form>
 </div>
+
+<!--Validaciones con JavaScript-->
+
+<script>
+    const nombre = document.getElementById('nombre');
+    const paterno = document.getElementById('paterno');
+    const materno = document.getElementById('materno');
+    const celular = document.getElementById('celular');
+    const direccion = document.getElementById('direccion');
+    const nombreError = document.getElementById('nombreError');
+    const paternoError = document.getElementById('paternoError');
+    const maternoError = document.getElementById('maternoError');
+    const celularError = document.getElementById('celularError');
+    const direccionError = document.getElementById('direccionError');
+
+    nombre.addEventListener('input', (event) => {
+        const nombreValido = /^[a-zA-Z ñ Ñ]*$/;
+        const nomValido = nombreValido.test(event.target.value);
+
+        if (!nomValido) {
+            nombre.classList.add('invalid');
+            nombre.classList.remove('valid');
+            nombreError.textContent = 'El nombre solo puede contener letras y espacios';
+        } else {
+            nombre.classList.remove('invalid');
+            nombre.classList.add('valid');
+            nombreError.textContent = '';
+        }
+    });
+
+        nombre.addEventListener('focus', () => {
+        if (nombre.classList.contains('invalid')) {
+            nombre.classList.remove('invalid');
+            nombre.classList.add('valid');
+        }
+    });
+
+
+    paterno.addEventListener('input', (event) => {
+            const paternoValido = /^[a-zA-Z ñ Ñ]*$/;
+            const patValido = paternoValido.test(event.target.value);
+
+            if (!patValido) {
+                paterno.classList.add('invalid');
+                paterno.classList.remove('valid');
+                paternoError.textContent = 'Los apellidos solo pueden contener letras y espacios';
+            } else {
+                paterno.classList.remove('invalid');
+                paterno.classList.add('valid');
+                paternoError.textContent = '';
+            }
+        });
+
+            paterno.addEventListener('focus', () => {
+            if (paterno.classList.contains('invalid')) {
+                paterno.classList.remove('invalid');
+                paterno.classList.add('valid');
+            }
+        });
+
+
+    materno.addEventListener('input', (event) => {
+            const maternoValido = /^[a-zA-Z ñ Ñ]*$/;
+            const matValido = maternoValido.test(event.target.value);
+
+            if (!matValido) {
+                materno.classList.add('invalid');
+                materno.classList.remove('valid');
+                maternoError.textContent = 'Los apellidos solo pueden contener letras y espacios';
+            } else {
+                materno.classList.remove('invalid');
+                materno.classList.add('valid');
+                maternoError.textContent = '';
+            }
+        });
+
+            materno.addEventListener('focus', () => {
+            if (materno.classList.contains('invalid')) {
+                materno.classList.remove('invalid');
+                materno.classList.add('valid');
+            }
+        });
+
+
+    celular.addEventListener('input', (event) => {
+        const celularValido = /^[0-9]*$/;
+        const celValido = celularValido.test(event.target.value);
+
+        if (!celValido) {
+            celular.classList.add('invalid');
+            celular.classList.remove('valid');
+            celularError.textContent = 'El celular solo puede contener numeros';
+        } else if (event.target.value.length > 10) {
+            celular.classList.add('invalid');
+            celular.classList.remove('valid');
+            celularError.textContent = 'El celular no puede tener una longitud mayor a 10 dígitos';
+        } else {
+            celular.classList.remove('invalid');
+            celular.classList.add('valid');
+            celularError.textContent = '';
+        }
+        });
+
+            celular.addEventListener('focus', () => {
+            if (celular.classList.contains('invalid')) {
+                celular.classList.remove('invalid');
+                celular.classList.add('valid');
+            }
+    });
+
+    direccion.addEventListener('input', (event) => {
+        const direccionValida = /^[a-zA-Z ñ Ñ 0-9 ,]*$/;
+        const dirValida = direccionValida.test(event.target.value);
+
+        if (!dirValida) {
+            direccion.classList.add('invalid');
+            direccion.classList.remove('valid');
+            direccionError.textContent = 'La direccion solo puede contener letras, numeros, espacios y comas';
+        } else {
+            direccion.classList.remove('invalid');
+            direccion.classList.add('valid');
+            direccionError.textContent = '';
+        }
+    });
+
+        direccion.addEventListener('focus', () => {
+        if (direccion.classList.contains('invalid')) {
+            direccion.classList.remove('invalid');
+            direccion.classList.add('valid');
+        }
+    });
+
+
+/*Validaciones cuando un campo quede vacio*/
+
+    const btnAgregar = document.getElementById('agr');
+
+    btnAgregar.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    if (nombre.value.trim() === '') {
+        nombre.classList.add('invalid');
+        nombreError.textContent = 'Este campo es obligatorio';
+    } else {
+        nombre.classList.remove('invalid');
+        nombreError.textContent = '';
+    }
+
+    if (paterno.value.trim() === '') {
+        paterno.classList.add('invalid');
+        paternoError.textContent = 'Este campo es obligatorio';
+    } else {
+        paterno.classList.remove('invalid');
+        paternoError.textContent = '';
+    }
+
+    if (materno.value.trim() === '') {
+        materno.classList.add('invalid');
+        maternoError.textContent = 'Este campo es obligatorio';
+    } else {
+        materno.classList.remove('invalid');
+        maternoError.textContent = '';
+    }
+
+    if (celular.value.trim() === '') {
+        celular.classList.add('invalid');
+        celularError.textContent = 'Este campo es obligatorio';
+    } else if (event.target.value.length < 10) {
+        celular.classList.add('invalid');
+        celularError.textContent = 'El celular no puede tener una longitud menor a 10 dígitos';
+    } else {
+        celular.classList.remove('invalid');
+        celularError.textContent = '';
+    }
+
+    if (direccion.value.trim() === '') {
+        direccion.classList.add('invalid');
+        direccionError.textContent = 'Este campo es obligatorio';
+    } else {
+        direccion.classList.remove('invalid');
+        direccionError.textContent = '';
+    }
+
+    if (nombre.value.trim() !== '' && paterno.value.trim() !== '' && materno.value.trim() !== '' && celular.value.trim() !== '' && celular.value.length === 10 && direccion.value.trim() !== '') {
+        document.querySelector('.formulario').submit();
+        celularError.textContent = '';
+        celular.classList.remove('invalid');
+    }
+    });
+
+</script>

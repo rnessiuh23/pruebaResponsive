@@ -586,6 +586,30 @@ p {
   margin-right: 120px;
 }
 
+.form-control.invalid {
+  border-color: red;
+  outline: 0;
+  box-shadow: 0 0 0 2px red;
+}
+
+.form-control.invalid:focus {
+  border-color: red;
+  outline: 0;
+  box-shadow: 0 0 0 2px red;
+}
+
+.form-control.valid:focus {
+  border-color: #15803d;
+  outline: 0;
+  box-shadow: 0 0 0 2px #15803d;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
+
 :root {
   --facebook: #3b5999;
   --instagram: #e4405f;
