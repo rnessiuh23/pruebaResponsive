@@ -31,6 +31,7 @@
         <label for="fechaNac"> </label>
         <input type="date" name="fechaNac" placeholder="" id="fechaNac"
         class="form-control bg-transparent text-black"/>
+        <span id="fechaNacError" class="text-danger"></span>
         <br>
     </div>
     
@@ -40,7 +41,8 @@
         <label for="masculino">Masculino</label>
 
         <input type="radio" name="sexo" value="Femenino" id="Fem">
-        <label for="femenino">Femenino</label>
+        <label for="femenino">Femenino</label><br>
+        <span id="sexoError" class="text-danger"></span>
     </div>
     <br>
     
@@ -69,16 +71,18 @@
     const nombre = document.getElementById('nombre');
     const paterno = document.getElementById('paterno');
     const materno = document.getElementById('materno');
+    const fechaNac = document.getElementById('fechaNac');
     const celular = document.getElementById('celular');
     const direccion = document.getElementById('direccion');
     const nombreError = document.getElementById('nombreError');
     const paternoError = document.getElementById('paternoError');
     const maternoError = document.getElementById('maternoError');
+    const fechaNacError = document.getElementById('fechaNacError');
     const celularError = document.getElementById('celularError');
     const direccionError = document.getElementById('direccionError');
 
     nombre.addEventListener('input', (event) => {
-        const nombreValido = /^[a-zA-Z ñ Ñ]*$/;
+        const nombreValido = /^[\p{L} ñÑ]*$/u;
         const nomValido = nombreValido.test(event.target.value);
 
         if (!nomValido) {
@@ -101,7 +105,7 @@
 
 
     paterno.addEventListener('input', (event) => {
-            const paternoValido = /^[a-zA-Z ñ Ñ]*$/;
+            const paternoValido = /^[\p{L} ñÑ]*$/u;
             const patValido = paternoValido.test(event.target.value);
 
             if (!patValido) {
@@ -124,7 +128,7 @@
 
 
     materno.addEventListener('input', (event) => {
-            const maternoValido = /^[a-zA-Z ñ Ñ]*$/;
+            const maternoValido = /^[\p{L} ñÑ]*$/u;
             const matValido = maternoValido.test(event.target.value);
 
             if (!matValido) {
@@ -143,6 +147,32 @@
                 materno.classList.remove('invalid');
                 materno.classList.add('valid');
             }
+        });
+
+
+    fechaNac.addEventListener('change', (event) => {
+            const fecha = new Date(event.target.value);
+            const anio = fecha.getFullYear();
+            if (anio < 1960) {
+            fechaNac.classList.add('invalid');
+            fechaNac.classList.remove('valid');
+            fechaNacError.textContent = 'El año de nacimiento no puede ser menor a 1960';
+            } else if (anio > 2005) {
+            fechaNac.classList.add('invalid');
+            fechaNac.classList.remove('valid');
+            fechaNacError.textContent = 'El año de nacimiento no puede ser mayor a 2005';
+            } else {
+            fechaNac.classList.remove('invalid');
+            fechaNac.classList.add('valid');
+            fechaNacError.textContent = '';
+            }
+        });
+
+        fechaNac.addEventListener('focus', () => {
+        if (fechaNac.classList.contains('invalid')) {
+            fechaNac.classList.remove('invalid');
+            fechaNac.classList.add('valid');
+        }
         });
 
 
@@ -171,6 +201,7 @@
                 celular.classList.add('valid');
             }
     });
+
 
     direccion.addEventListener('input', (event) => {
         const direccionValida = /^[a-zA-Z ñ Ñ 0-9 ,]*$/;
@@ -226,15 +257,44 @@
         maternoError.textContent = '';
     }
 
+    if (fechaNac.value.trim() === '') {
+        fechaNac.classList.add('invalid');
+        fechaNacError.textContent = 'Este campo es obligatorio';
+    } else {
+        fechaNac.classList.remove('invalid');
+        fechaNacError.textContent = '';
+    }
+
+    const sexo = document.querySelector('input[name="sexo"]:checked');
+
+    if (!sexo) {
+        document.getElementById('sexoError').textContent = 'Debe seleccionar un sexo';
+    } else {
+        document.getElementById('sexoError').textContent = '';
+    }
+
+    const radiosSexo = document.querySelectorAll('input[name="sexo"]');
+
+    radiosSexo.forEach(radio => {
+    radio.addEventListener('change', () => {
+        if (sexoError.textContent !== '') {
+        sexoError.textContent = '';
+        }
+    });
+    });
+
     if (celular.value.trim() === '') {
         celular.classList.add('invalid');
         celularError.textContent = 'Este campo es obligatorio';
-    } else if (event.target.value.length < 10) {
+    } else if (celular.value.length < 10) {
         celular.classList.add('invalid');
         celularError.textContent = 'El celular no puede tener una longitud menor a 10 dígitos';
     } else {
         celular.classList.remove('invalid');
         celularError.textContent = '';
+    }
+    if (celular.value.trim() === '') {
+        
     }
 
     if (direccion.value.trim() === '') {
@@ -245,11 +305,11 @@
         direccionError.textContent = '';
     }
 
-    if (nombre.value.trim() !== '' && paterno.value.trim() !== '' && materno.value.trim() !== '' && celular.value.trim() !== '' && celular.value.length === 10 && direccion.value.trim() !== '') {
+    if (nombre.value.trim() !== '' && paterno.value.trim() !== '' && materno.value.trim() !== '' && celular.value.trim() !== '' && celular.value.length === 10 && direccion.value.trim() !== '' && sexo) {
         document.querySelector('.formulario').submit();
         celularError.textContent = '';
         celular.classList.remove('invalid');
     }
     });
-
+    
 </script>
