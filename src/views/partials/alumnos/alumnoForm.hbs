@@ -82,7 +82,7 @@
     const direccionError = document.getElementById('direccionError');
 
     nombre.addEventListener('input', (event) => {
-        const nombreValido = /^[\p{L} ñÑ]*$/u;
+        const nombreValido = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/;
         const nomValido = nombreValido.test(event.target.value);
 
         if (!nomValido) {
@@ -105,7 +105,7 @@
 
 
     paterno.addEventListener('input', (event) => {
-            const paternoValido = /^[\p{L} ñÑ]*$/u;
+            const paternoValido = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/;
             const patValido = paternoValido.test(event.target.value);
 
             if (!patValido) {
@@ -128,7 +128,7 @@
 
 
     materno.addEventListener('input', (event) => {
-            const maternoValido = /^[\p{L} ñÑ]*$/u;
+            const maternoValido = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/;
             const matValido = maternoValido.test(event.target.value);
 
             if (!matValido) {
@@ -204,7 +204,7 @@
 
 
     direccion.addEventListener('input', (event) => {
-        const direccionValida = /^[a-zA-Z ñ Ñ 0-9 ,]*$/;
+        const direccionValida = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s 0-9 ,]*$/;
         const dirValida = direccionValida.test(event.target.value);
 
         if (!dirValida) {
