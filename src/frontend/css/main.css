@@ -1142,80 +1142,6 @@ p {
 
 }
 
-@media only screen and (max-width: 590px) and (max-height: 380px) {
-
-  #head{
-    width: 100vw;
-  }
-
-  #pro {
-    margin-top: -5%;
-    font-size: 32px;
-    width: 70vw;
-    height: 3vh;
-    padding: 0 0 38px 0;
-  }
-
-  #sub {
-    font-size: 20px;
-    margin-left: 8%;
-    margin-top: 0%;
-  } 
-  
-  #subtitulos .btn {
-    width: 13%;
-    height: 55%;
-    display: inline-block;
-    font-size: 12px;
-    padding: 1px 8px;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    margin-top: -4%;
-  }
-
-  #opci > p {
-    font-size: 11px;
-    text-align: justify;
-  }
-
-  #funcion {
-    width: 100vw;
-    margin-top: 5%;
-    margin-bottom: 60%;
-  }
-
-  #funcion2 {
-    margin-bottom: 105%;
-  }
-
-  #contacto {
-    font-size: 30px;
-  }
-
-  .redes-container {
-    margin-left: -19%;
-    margin-top: 3%;
-    width: 85%;
-  }
-
-  #figure {
-    margin-top: 3%;
-    margin-left: -12%;
-    width: 40%;
-  }
-
-  #phone {
-    margin-top: 3%;
-    margin-left: -10%;
-    height: 50%;
-    width: 60%;
-  }
-
-
-} 
-
-
 @media only screen and (max-width: 550px) and (max-height: 1100px) {
 
   nav{
@@ -2369,3 +2295,76 @@ p {
     margin-top: 30%;
   }  
 }
+
+@media only screen and (max-width: 590px) and (max-height: 380px) {
+
+  #head{
+    width: 100vw;
+  }
+
+  #pro {
+    margin-top: -5%;
+    font-size: 32px;
+    width: 70vw;
+    height: 3vh;
+    padding: 0 0 38px 0;
+  }
+
+  #sub {
+    font-size: 20px;
+    margin-left: 8%;
+    margin-top: 0%;
+  } 
+  
+  #subtitulos .btn {
+    width: 13%;
+    height: 55%;
+    display: inline-block;
+    font-size: 12px;
+    padding: 1px 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: -4%;
+  }
+
+  #opci > p {
+    font-size: 11px;
+    text-align: justify;
+  }
+
+  #funcion {
+    width: 100vw;
+    margin-top: 5%;
+    margin-bottom: 60%;
+  }
+
+  #funcion2 {
+    margin-bottom: 105%;
+  }
+
+  #contacto {
+    font-size: 30px;
+  }
+
+  .redes-container {
+    margin-left: -19%;
+    margin-top: 3%;
+    width: 85%;
+  }
+
+  #figure {
+    margin-top: 3%;
+    margin-left: -12%;
+    width: 40%;
+  }
+
+  #phone {
+    margin-top: 3%;
+    margin-left: -10%;
+    height: 50%;
+    width: 60%;
+  }
+
+
+} 
