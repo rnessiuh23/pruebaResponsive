@@ -81,6 +81,8 @@
     const celularError = document.getElementById('celularError');
     const direccionError = document.getElementById('direccionError');
 
+    let validacionActiva = false;
+
     nombre.addEventListener('input', (event) => {
         const nombreValido = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/;
         const nomValido = nombreValido.test(event.target.value);
@@ -89,17 +91,12 @@
             nombre.classList.add('invalid');
             nombre.classList.remove('valid');
             nombreError.textContent = 'El nombre solo puede contener letras y espacios';
+            validacionActiva = true;
         } else {
             nombre.classList.remove('invalid');
             nombre.classList.add('valid');
             nombreError.textContent = '';
-        }
-    });
-
-        nombre.addEventListener('focus', () => {
-        if (nombre.classList.contains('invalid')) {
-            nombre.classList.remove('invalid');
-            nombre.classList.add('valid');
+            validacionActiva = false;
         }
     });
 
@@ -234,16 +231,23 @@
     event.preventDefault();
 
     if (nombre.value.trim() === '') {
-        nombre.classList.add('invalid');
-        nombreError.textContent = 'Este campo es obligatorio';
+    nombre.classList.add('invalid');
+    nombreError.textContent = 'Este campo es obligatorio';
+    } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/.test(nombre.value)) {
+    nombre.classList.add('invalid');
+    nombreError.textContent = 'El nombre no puede llevar numeros ni caracteres especiales';
     } else {
-        nombre.classList.remove('invalid');
-        nombreError.textContent = '';
+    nombre.classList.remove('invalid');
+    nombreError.textContent = '';
     }
+
 
     if (paterno.value.trim() === '') {
         paterno.classList.add('invalid');
         paternoError.textContent = 'Este campo es obligatorio';
+    } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/.test(paterno.value)) {
+        paterno.classList.add('invalid');
+        paternoError.textContent = 'Los apellidos no pueden llevar numeros ni caracteres especiales';
     } else {
         paterno.classList.remove('invalid');
         paternoError.textContent = '';
@@ -252,6 +256,9 @@
     if (materno.value.trim() === '') {
         materno.classList.add('invalid');
         maternoError.textContent = 'Este campo es obligatorio';
+    } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/.test(materno.value)) {
+        materno.classList.add('invalid');
+        maternoError.textContent = 'Los apellidos no pueden llevar numeros ni caracteres especiales';
     } else {
         materno.classList.remove('invalid');
         maternoError.textContent = '';
@@ -260,10 +267,13 @@
     if (fechaNac.value.trim() === '') {
         fechaNac.classList.add('invalid');
         fechaNacError.textContent = 'Este campo es obligatorio';
+    } else if (fechaNac.classList.contains('invalid')) {
+        fechaNacError.textContent = ('Por favor, ingresa una fecha de nacimiento válida.');
     } else {
         fechaNac.classList.remove('invalid');
         fechaNacError.textContent = '';
     }
+
 
     const sexo = document.querySelector('input[name="sexo"]:checked');
 
@@ -286,6 +296,9 @@
     if (celular.value.trim() === '') {
         celular.classList.add('invalid');
         celularError.textContent = 'Este campo es obligatorio';
+    } else if (!/^[0-9]*$/.test(celular.value)) {
+        celular.classList.add('invalid');
+        celularError.textContent = 'El celular no puede llevar letras ni caracteres especiales';
     } else if (celular.value.length < 10) {
         celular.classList.add('invalid');
         celularError.textContent = 'El celular no puede tener una longitud menor a 10 dígitos';
@@ -300,16 +313,22 @@
     if (direccion.value.trim() === '') {
         direccion.classList.add('invalid');
         direccionError.textContent = 'Este campo es obligatorio';
+    } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s 0-9 ,]*$/.test(direccion.value)) {
+        direccion.classList.add('invalid');
+        direccionError.textContent = 'La direccion no puede llevar guiones, puntos ni caracteres especiales';
     } else {
         direccion.classList.remove('invalid');
         direccionError.textContent = '';
     }
 
-    if (nombre.value.trim() !== '' && paterno.value.trim() !== '' && materno.value.trim() !== '' && celular.value.trim() !== '' && celular.value.length === 10 && direccion.value.trim() !== '' && sexo) {
+    if (nombre.value.trim() !== '' && /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/.test(nombre.value) && paterno.value.trim() !== '' && /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/.test(paterno.value) 
+    && materno.value.trim() !== '' && /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/.test(materno.value) && celular.value.trim() !== '' && /^[0-9]*$/.test(celular.value) 
+    && celular.value.length === 10 && !fechaNac.classList.contains('invalid') && direccion.value.trim() !== '' && /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s 0-9 ,]*$/.test(direccion.value) && sexo) {
         document.querySelector('.formulario').submit();
         celularError.textContent = '';
         celular.classList.remove('invalid');
     }
+
     });
     
 </script>
