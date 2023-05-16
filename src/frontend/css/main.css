@@ -695,583 +695,6 @@ p {
 
 /*Queries para pantalla de celular medianas*/
 
-@media only screen and (max-width: 1200px) and (max-height: 2600px) {
-  p {
-    padding: 0 50px;
-  }
-  .title {
-    margin-bottom: 0px;
-    font-size: 40px;
-  }
-
-  .about {
-    width: 100%;
-    height: 45vh;
-    padding: 50px 0;
-  }
-
-  #funcion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    padding: 15vh 0 60vh 0;
-  }
-  
-  #funcion2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    
-  }
-  
-  #funcion3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-  }  
-
-  #Colum{
-  background-color: #17ad37;
-  }
-
-  #Colum > th{
-    color: #fff;
-  }
-
-  #opc{
-    font-size: 25px;
-  }
-
-  #opci{
-    height: 45%;
-  }
-
-  #opci > p{
-    font-size: 13px;
-  }
-
-  #head{
-    padding: 50px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 110%;
-    width: 100vw;
-    margin-top: 2%;
-  }
-
-  .slider{
-    width: 100%;
-    height: 15vh;
-    background-color: white;
-  }
-
-  .slider .slide-track{
-    width: 45vw;
-    height: 15vh;
-  }
-
-  .slider .slide-track .slide > img{
-    width: 45vw;
-    height: 15vh;
-  } 
-
-  #subtitulos{
-    width: 70%;
-    height: 12vh;
-  }
-
-  #pro{
-    font-size: 25px;
-    width: 70vw;
-    height: 3vh;
-  }
-
-  #sub{
-    font-size: 15px;
-    width: 60vw;
-    height: 1vh;
-    margin-left: 6%;
-  }
-
-  #sop{
-    font-size: 25px;
-  }
-
-  #operaciones {
-  background-color: #fff;
-  width: 100%;
-}
-
-.box-container .box {
-  height: 140px;
-  width: 270px;
-  background: #15803d;
-  text-align: center;
-  border-radius: 20px;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
-  margin: 15px;
-}
-
-.box-container .box i {
-  /*Solo se modificaran los iconos*/
-  height: 30px;
-  width: 30px;
-  line-height: 30px;
-  text-align: center;
-  border-radius: 50%;
-  color: #fff;
-  background: #f97316;
-  font-size: 15px;
-  margin: 10px 0;
-}
-
-.box-container .box h3 {
-  font-size: 20px;
-  color: #e91e63;
-}
-
-.box-container .box p {
-  padding: 0 15px;
-  font-size: 14px;
-}
-
-  #subtitulos .btn{
-    width: 20%;
-    height: 23%;
-    display: inline-block;
-    color: white;
-    font-size: 12px;
-    padding: 0px 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    margin-top: -7%;
-    justify-content: center;
-  }
-
-  #opci2 {
-    background-color: #15803d;
-    width: 100%;
-    margin-top: 1%;
-  }
-
-  #datosP {
-    color: #ffbf35;
-    font-family: monospace;
-    font-style: italic;
-    margin-top: 1%;
-    font-size: 25px;
-  }
-
-  nav{
-    width: 95%;
-  }
-  
-  .menu-horizontal > li{
-    width: 28%;
-  }
-
-  .menu-horizontal > li > a {
-    display: block;
-    padding: 10px 20px;
-    color: white; /*Esto es el color de la letra*/
-    text-decoration: none;
-    font-weight: bold;
-  }
-  .menu-horizontal > li:hover {
-    background: linear-gradient(180deg, #67b108 0%, #82d616 100%);
-    transition: all 0.3s;
-    width: 29%;
-  }
-
-  .box-container2 {
-    background-color: white;
-  }
-
-  .box-container2 .box {
-    width: 315px;
-    height: 300px;
-    padding-bottom: 20px;
-    text-align: center;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
-    background: #15803d;
-    margin: 20px 20px;
-    border-radius: 8%;
-    margin-top: 3%;
-  }
-  
-  .box-container2 .box img {
-    height: 100px;
-    width: 100px;
-    object-fit: cover;
-    border-radius: 50%; /*Esto nos srive para hacer los fondos un poco mas redondos*/
-    margin-top: -18px;
-    border: 6px solid #eab308;
-  }
-  
-  .box-container2 .box p {
-    font-size: 13px;
-    color: #fff;
-    padding: 0;
-    margin: 6px;
-  }
-
-  .redes-container {
-    display: flex;
-    flex-direction: column;
-    margin-left: -15%;
-  }
-  
-  #phone, #redes, #figure {
-    width: 90%; /* ocupa el ancho completo del contenedor padre */
-    height: auto; /* ajusta la altura al contenido */
-  }
-  
-  #phone{
-    order: 3;
-    margin-top: 30px;
-    margin-left: -100px;
-  }
-  
-  #figure{
-    margin-top: 10px;
-    margin-right: 5px;
-    margin-left: -125px;
-  }
-
-  #redes{
-    margin-top: 40px;
-    margin-left: -165px;
-  }
-
-  #phone > p{
-    font-size: 22px;
-  }
-
-  #figure .img > img{
-    width: 210px;
-    height: 180px;
-  }
-
-  .contact {
-    padding: 50px 0;
-    background: #171717;
-    margin-top: -2%;
-    width: 100vw;
-  }
-
-  #contacto{
-    margin-left: 30px;
-  }
-
-  #contactoTit {
-    width: 100vw;
-    height: 10vh;
-  }
-
-  body {
-    background-image: none;
-    background-color: white;
-  }
-}
-
-@media only screen and (max-width: 950px) and (max-height: 400px) {
-
-  nav{
-    margin-top: -3%;
-  }
-
-  #head {
-    padding: 50px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75vh;
-    width: 100vw;
-    margin-top: 2%;
-  }
-
-  #pro {
-    margin-top: -2%;
-    font-size: 33px;
-    width: 70vw;
-    height: 3vh;
-  }
-
-  #sub {
-    font-size: 25px;
-    margin-left: 10%;
-    margin-top: 0%;
-  }
-
-  #subtitulos .btn {
-    width: 12%;
-    height: 55%;
-    display: inline-block;
-    font-size: 12px;
-    padding: 2px 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    text-align: center;
-    margin-top: 1%;
-  }
-
-  .slider {
-    width: 100%;
-    height: 50vh;
-    background-color: white;
-  }
-
-  .slider .slide-track {
-    width: 100%;
-    height: 50vh;
-  }
-
-  .slider .slide {
-    width: 100%;
-    height: 50vh;
-  }
-
-  .slider .slide-track .slide > img {
-    width: 45vw;
-    height: 50vh;
-  }
-
-  #opci {
-    height: 25%;
-  }
-  
-  #opci .title {
-    margin-top: 1%;
-    padding: 11px;
-  }
-
-  #funcion{
-    width: 100vw;
-    margin-top: -15%;
-    margin-bottom: 3%;
-  }
-
-  #opci2 {
-    width: 100%;
-    height: 20vh;
-    margin-top: -2%;
-  }
-
-  #datosP {
-    margin-top: 1%;
-    font-size: 25px;
-    padding: 11px;
-  }
-
-  .box-container2 .box {
-    width: 285px;
-    height: 290px;
-    padding-bottom: 20px;
-    text-align: center;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
-    margin: 20px 20px;
-    border-radius: 8%;
-    margin-top: 3%;
-  }
-
-  .box-container2 .box p {
-    font-size: 13px;
-    padding: 0 20px;
-    margin: 6px;
-  }
-
-  #funcion2{
-    margin-bottom: 53%;
-  }
-
-  #funcion3 {
-    width: 100vw;
-    margin-top: -15%;
-  }
-
-  #contactoTit {
-    width: 100vw;
-    height: 23vh;
-  }
-
-  #redes {
-    margin-top: -8%;
-    margin-left: -18%;
-    width: 85%;
-  }
-
-  #figure {
-    margin-top: 3%;
-    margin-left: -13%;
-    width: 40%;
-}
-
-  .redes-container {
-    margin-left: -6%;
-    margin-top: 7%;
-    width: 85%;
-  }
-
-  .redes-container ul li {
-    display: inline-block;
-    margin: 0 5px;
-    width: 45px;
-    height: 45px;
-    text-align: center;
-  }
-
-  .contact {
-    padding: 50px 0;
-    background: #171717;
-    margin-top: -2%;
-    width: 100vw;
-    height: 110vh;
-  }
-
-  #phone {
-    margin-top: 3%;
-    margin-left: -4%;
-    height: 50%;
-    width: 45%;
-  }
-
-}
-
-@media only screen and (max-width: 550px) and (max-height: 1100px) {
-
-  nav{
-    width: 90vw;
-    /*margin-top: -6%;*/
-  }
-
-  .menu-horizontal > li > a {
-    display: block;
-    padding: 10px 20px;
-    font-size: 12px;
-  }
-
-  #pro{
-    font-size: 24px;
-    width: 70vw;
-    height: 3vh;
-  }
-
-  .box-container2 .box p {
-    font-size: 13px;
-    padding: 0 22px;
-    margin: 7px;
-  }
-
-  #opci > p {
-    font-size: 13px;
-    text-align: justify;
-  }
-
-  #funcion {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    margin-bottom: -3%;
-  }
-  
-  #funcion2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    
-  }
-  
-  #funcion3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100vw;
-    margin-top: 90%;
-  }
-
-  .contact{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 0;
-    margin-top: -5%;
-    width: 100vw;
-    height: 50vh;
-  }
-
-  #contactoTit {
-    margin-top: 1%;
-  }
-
-  #contacto{
-    margin-left: 0;
-    font-size: 28px;
-  }
-
-  #redes {
-    margin-top: -8%;
-    margin-left: -25%;
-    width: 115%;
-  }
-
-  .redes-container {
-    margin-left: -35%;
-    margin-top: -4%;
-    width: 85%;
-}
-
-  .redes-container ul li {
-    display: inline-block;
-    margin: 0 5px;
-    width: 45px;
-    height: 45px;
-    text-align: center;
-  }
-
-  .redes-container ul li a {
-    background-color: #e91e63;
-  }
-  
-  .cen{
-    margin: 0;
-  }
-
-  #phone{
-    order: 3;
-    width: 95%;
-    margin-top: 9%;
-    margin-left: -3%;
-  }
-
-  #opci2 {
-    margin-top: -12%;
-    height: 8vh;
-}
-
-  #datosP {
-    padding: 3%;
-    font-size: 25px;
-}
-
-  #figure{
-    margin-top: 5%;
-    margin-left: -13%;
-  }
-
-  #figure .img > img {
-    width: 230px;
-    height: 190px;
-}
-
-} 
-
 /*Queries para pantallas pequeñas*/
 
 @media only screen and (max-width: 300px) and (max-height: 670px) {
@@ -1633,7 +1056,7 @@ p {
 
 }
 
-@media only screen and (max-width: 360px) and (max-height: 750px){
+@media only screen and (max-width: 365px) and (max-height: 750px){
 
   #subtitulos .btn {
     width: 20%;
@@ -1739,7 +1162,7 @@ p {
   
 }
 
-@media only screen and (max-width: 380px) and (max-height: 675px){
+@media only screen and (max-width: 385px) and (max-height: 675px){
 
   #contactoTit {
     margin-top: 20%;
@@ -1764,7 +1187,7 @@ p {
 
 }
 
-@media only screen and (max-width: 380px) and (max-height: 680px) {
+@media only screen and (max-width: 386px) and (max-height: 680px) {
 
   .redes-container {
     margin-left: -70%;
@@ -1783,7 +1206,7 @@ p {
 
 }
 
-@media only screen and (max-width: 380px) and (max-height: 700px){
+@media only screen and (max-width: 387px) and (max-height: 700px){
 
   #head{
     height: 110%;
@@ -1954,7 +1377,7 @@ p {
   }
 }
 
-@media only screen and (max-width: 380px) and (max-height: 820px){
+@media only screen and (max-width: 388px) and (max-height: 820px){
 
   #subtitulos .btn {
     width: 20%;
@@ -2294,4 +1717,581 @@ p {
     align-items: center;
     margin-top: 30%;
   }  
+}
+
+@media only screen and (max-width: 550px) and (max-height: 1100px) {
+
+  nav{
+    width: 90vw;
+    /*margin-top: -6%;*/
+  }
+
+  .menu-horizontal > li > a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  #pro{
+    font-size: 24px;
+    width: 70vw;
+    height: 3vh;
+  }
+
+  .box-container2 .box p {
+    font-size: 13px;
+    padding: 0 22px;
+    margin: 7px;
+  }
+
+  #opci > p {
+    font-size: 13px;
+    text-align: justify;
+  }
+
+  #funcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-bottom: -3%;
+  }
+  
+  #funcion2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    
+  }
+  
+  #funcion3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-top: 90%;
+  }
+
+  .contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+    margin-top: -5%;
+    width: 100vw;
+    height: 50vh;
+  }
+
+  #contactoTit {
+    margin-top: 1%;
+  }
+
+  #contacto{
+    margin-left: 0;
+    font-size: 28px;
+  }
+
+  #redes {
+    margin-top: -8%;
+    margin-left: -25%;
+    width: 115%;
+  }
+
+  .redes-container {
+    margin-left: -35%;
+    margin-top: -4%;
+    width: 85%;
+}
+
+  .redes-container ul li {
+    display: inline-block;
+    margin: 0 5px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+  }
+
+  .redes-container ul li a {
+    background-color: #e91e63;
+  }
+  
+  .cen{
+    margin: 0;
+  }
+
+  #phone{
+    order: 3;
+    width: 95%;
+    margin-top: 9%;
+    margin-left: -3%;
+  }
+
+  #opci2 {
+    margin-top: -12%;
+    height: 8vh;
+}
+
+  #datosP {
+    padding: 3%;
+    font-size: 25px;
+}
+
+  #figure{
+    margin-top: 5%;
+    margin-left: -13%;
+  }
+
+  #figure .img > img {
+    width: 230px;
+    height: 190px;
+}
+
+} 
+
+@media only screen and (max-width: 950px) and (max-height: 400px) {
+
+  nav{
+    margin-top: -3%;
+  }
+
+  #head {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 100vw;
+    margin-top: 2%;
+  }
+
+  #pro {
+    margin-top: -2%;
+    font-size: 33px;
+    width: 70vw;
+    height: 3vh;
+  }
+
+  #sub {
+    font-size: 25px;
+    margin-left: 10%;
+    margin-top: 0%;
+  }
+
+  #subtitulos .btn {
+    width: 12%;
+    height: 55%;
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 1%;
+  }
+
+  .slider {
+    width: 100%;
+    height: 50vh;
+    background-color: white;
+  }
+
+  .slider .slide-track {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .slider .slide {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .slider .slide-track .slide > img {
+    width: 45vw;
+    height: 50vh;
+  }
+
+  #opci {
+    height: 25%;
+  }
+  
+  #opci .title {
+    margin-top: 1%;
+    padding: 11px;
+  }
+
+  #funcion{
+    width: 100vw;
+    margin-top: -15%;
+    margin-bottom: 3%;
+  }
+
+  #opci2 {
+    width: 100%;
+    height: 20vh;
+    margin-top: -2%;
+  }
+
+  #datosP {
+    margin-top: 1%;
+    font-size: 25px;
+    padding: 11px;
+  }
+
+  .box-container2 .box {
+    width: 285px;
+    height: 290px;
+    padding-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    margin: 20px 20px;
+    border-radius: 8%;
+    margin-top: 3%;
+  }
+
+  .box-container2 .box p {
+    font-size: 13px;
+    padding: 0 20px;
+    margin: 6px;
+  }
+
+  #funcion2{
+    margin-bottom: 53%;
+  }
+
+  #funcion3 {
+    width: 100vw;
+    margin-top: -15%;
+  }
+
+  #contactoTit {
+    width: 100vw;
+    height: 23vh;
+  }
+
+  #redes {
+    margin-top: -8%;
+    margin-left: -18%;
+    width: 85%;
+  }
+
+  #figure {
+    margin-top: 3%;
+    margin-left: -13%;
+    width: 40%;
+}
+
+  .redes-container {
+    margin-left: -6%;
+    margin-top: 7%;
+    width: 85%;
+  }
+
+  .redes-container ul li {
+    display: inline-block;
+    margin: 0 5px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+  }
+
+  .contact {
+    padding: 50px 0;
+    background: #171717;
+    margin-top: -2%;
+    width: 100vw;
+    height: 110vh;
+  }
+
+  #phone {
+    margin-top: 3%;
+    margin-left: -4%;
+    height: 50%;
+    width: 45%;
+  }
+
+}
+
+@media only screen and (max-width: 1200px) and (max-height: 2600px) {
+  p {
+    padding: 0 50px;
+  }
+  .title {
+    margin-bottom: 0px;
+    font-size: 40px;
+  }
+
+  .about {
+    width: 100%;
+    height: 45vh;
+    padding: 50px 0;
+  }
+
+  #funcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    padding: 15vh 0 60vh 0;
+  }
+  
+  #funcion2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    
+  }
+  
+  #funcion3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }  
+
+  #Colum{
+  background-color: #17ad37;
+  }
+
+  #Colum > th{
+    color: #fff;
+  }
+
+  #opc{
+    font-size: 25px;
+  }
+
+  #opci{
+    height: 45%;
+  }
+
+  #opci > p{
+    font-size: 13px;
+  }
+
+  #head{
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110%;
+    width: 100vw;
+    margin-top: 2%;
+  }
+
+  .slider{
+    width: 100%;
+    height: 15vh;
+    background-color: white;
+  }
+
+  .slider .slide-track{
+    width: 45vw;
+    height: 15vh;
+  }
+
+  .slider .slide-track .slide > img{
+    width: 45vw;
+    height: 15vh;
+  } 
+
+  #subtitulos{
+    width: 70%;
+    height: 12vh;
+  }
+
+  #pro{
+    font-size: 25px;
+    width: 70vw;
+    height: 3vh;
+  }
+
+  #sub{
+    font-size: 15px;
+    width: 60vw;
+    height: 1vh;
+    margin-left: 6%;
+  }
+
+  #sop{
+    font-size: 25px;
+  }
+
+  #operaciones {
+  background-color: #fff;
+  width: 100%;
+}
+
+.box-container .box {
+  height: 140px;
+  width: 270px;
+  background: #15803d;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  margin: 15px;
+}
+
+.box-container .box i {
+  /*Solo se modificaran los iconos*/
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  background: #f97316;
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+.box-container .box h3 {
+  font-size: 20px;
+  color: #e91e63;
+}
+
+.box-container .box p {
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+  #subtitulos .btn{
+    width: 20%;
+    height: 23%;
+    display: inline-block;
+    color: white;
+    font-size: 12px;
+    padding: 0px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: -7%;
+    justify-content: center;
+  }
+
+  #opci2 {
+    background-color: #15803d;
+    width: 100%;
+    margin-top: 1%;
+  }
+
+  #datosP {
+    color: #ffbf35;
+    font-family: monospace;
+    font-style: italic;
+    margin-top: 1%;
+    font-size: 25px;
+  }
+
+  nav{
+    width: 95%;
+  }
+  
+  .menu-horizontal > li{
+    width: 28%;
+  }
+
+  .menu-horizontal > li > a {
+    display: block;
+    padding: 10px 20px;
+    color: white; /*Esto es el color de la letra*/
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .menu-horizontal > li:hover {
+    background: linear-gradient(180deg, #67b108 0%, #82d616 100%);
+    transition: all 0.3s;
+    width: 29%;
+  }
+
+  .box-container2 {
+    background-color: white;
+  }
+
+  .box-container2 .box {
+    width: 315px;
+    height: 300px;
+    padding-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    background: #15803d;
+    margin: 20px 20px;
+    border-radius: 8%;
+    margin-top: 3%;
+  }
+  
+  .box-container2 .box img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 50%; /*Esto nos srive para hacer los fondos un poco mas redondos*/
+    margin-top: -18px;
+    border: 6px solid #eab308;
+  }
+  
+  .box-container2 .box p {
+    font-size: 13px;
+    color: #fff;
+    padding: 0;
+    margin: 6px;
+  }
+
+  .redes-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: -15%;
+  }
+  
+  #phone, #redes, #figure {
+    width: 90%; /* ocupa el ancho completo del contenedor padre */
+    height: auto; /* ajusta la altura al contenido */
+  }
+  
+  #phone{
+    order: 3;
+    margin-top: 30px;
+    margin-left: -100px;
+  }
+  
+  #figure{
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: -125px;
+  }
+
+  #redes{
+    margin-top: 40px;
+    margin-left: -165px;
+  }
+
+  #phone > p{
+    font-size: 22px;
+  }
+
+  #figure .img > img{
+    width: 210px;
+    height: 180px;
+  }
+
+  .contact {
+    padding: 50px 0;
+    background: #171717;
+    margin-top: -2%;
+    width: 100vw;
+  }
+
+  #contacto{
+    margin-left: 30px;
+  }
+
+  #contactoTit {
+    width: 100vw;
+    height: 10vh;
+  }
+
+  body {
+    background-image: none;
+    background-color: white;
+  }
 }
