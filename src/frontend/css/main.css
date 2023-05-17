@@ -693,6 +693,100 @@ p {
   color: #fff;
 }
 
+.icon-red {
+  color: red;
+  display: none; /* Icono inicialmente oculto */
+}
+
+.icon-green {
+  color: green;
+  display: none; /* Icono inicialmente oculto */
+}
+
+.input-container {
+  position: relative;
+}
+
+#inputIcon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#inputIcon2 {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#iconPat {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#iconPat2 {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#iconMat {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#iconMat2 {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#iconCel {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#iconCel2 {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#iconDir {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#iconDir2 {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
 /*Queries para pantalla de celular medianas*/
 
 @media only screen and (max-width: 1200px) and (max-height: 2600px) {
@@ -1468,6 +1562,10 @@ p {
     margin-bottom: 9%;
   }
 
+  #contactoTit {
+    margin-top: 15%;
+  }
+
   .redes-container {
     margin-left: -35%;
     margin-top: 5%;
@@ -1477,6 +1575,13 @@ p {
   #contacto {
     margin-left: 0;
     font-size: 26px;
+  }
+
+  #phone {
+    order: 3;
+    width: 85%;
+    margin-top: 5%;
+    margin-left: -17%;
   }
 
 }
@@ -1495,6 +1600,10 @@ p {
 
   #funcion3 {
     margin-top: 83%;
+  }
+
+  #contactoTit {
+    margin-top: 23%;
   }
 
   .contact {
@@ -1517,8 +1626,8 @@ p {
 
   #phone {
     order: 3;
-    margin-top: 5%;
-    margin-left: 0;
+    margin-top: 3%;
+    margin-left: -35px;
   }
 
   #redes {
@@ -1543,12 +1652,13 @@ p {
   }
 
   #phone {
+    width: 90%;
     margin-top: 7%;
-    margin-left: -7%;
+    margin-left: -17%;
   }
 
   #contactoTit {
-    margin-top: 5%;
+    margin-top: 15%;
   }
 
 }
@@ -1696,7 +1806,7 @@ p {
   }
 
   #contactoTit {
-    margin-top: 10%;
+    margin-top: 20%;
   }
 
   .redes-container {
@@ -1716,9 +1826,10 @@ p {
   }
 
   #phone {
-    margin-top: 7%;
-    margin-left: -12%;
-  } 
+    width: 92%;
+    margin-top: 4%;
+    margin-left: -16%;
+  }
 
 }
 
@@ -2109,6 +2220,33 @@ p {
 
 }
 
+@media only screen and (max-width: 355px) and (max-height: 710px){
+
+  #pro {
+    font-size: 22px;
+    width: 70vw;
+    height: 3vh;
+  }
+
+  #funcion {
+    width: 100vw;
+    margin-bottom: 25%;
+    margin-top: 6%;
+  }
+
+  .redes-container {
+    margin-left: -42%;
+    margin-top: 5%;
+  }
+
+  .contact {
+    padding: 50px 0;
+    width: 100vw;
+    height: 53vh;
+  }
+
+}
+
 @media only screen and (max-width: 330px) and (max-height: 660px){
 
   #subtitulos .btn {
@@ -2462,5 +2600,3 @@ p {
   }
 
 }
-
-/*Queries para pantallas pequeñas*/
