@@ -787,6 +787,38 @@ p {
   line-height: 1;
 }
 
+#iconCre {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#iconCre2 {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#iconHrs {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#iconHrs2 {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
 /*Queries para pantalla de celular medianas*/
 
 @media only screen and (max-width: 1200px) and (max-height: 2600px) {
@@ -1677,17 +1709,22 @@ p {
   #redes {
     margin-top: -8%;
     margin-left: -25%;
-    width: 120%;
+    width: 130%;
   }
 
   #phone {
-    width: 90%;
+    width: 100%;
     margin-top: 7%;
-    margin-left: -17%;
+    margin-left: -13%;
   }
 
   #contactoTit {
     margin-top: 15%;
+  }
+
+  #figure {
+    margin-top: 5%;
+    margin-left: -11%;
   }
 
 }

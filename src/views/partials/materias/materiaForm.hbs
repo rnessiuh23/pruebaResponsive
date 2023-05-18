@@ -1,8 +1,8 @@
 <div class="card card-body p-4 text-white" id="cont">
-<form action="/asignatura/agregar" method="POST">
+<form action="/asignatura/agregar" method="POST" class="formulario">
 <h3 class="titulo">Alta para asignaturas</h2>
 <br>
-  <div>
+  <div class="input-container">
     <label class="dato" for="nombre">Introduzca un nombre: </label>
     <input
       type="text"
@@ -10,28 +10,241 @@
       placeholder="Nombre de la Materia: "
       id="nombre"
       class="form-control text-black"
-      autofocus required
+      autofocus
     />
+      <i id="inputIcon" class="fa-solid fa-circle-xmark icon-red"></i>
+      <i id="inputIcon2" class="fa fa-check-circle icon-green"></i>
   </div>
-  <br />
-  <div>
+      <span id="nombreError" class="text-danger"></span>
+  <br>
+
+
+  <div class="input-container">
     <label class="dato" for="creditos">Ingrese los creditos: </label>
-    <input
-      type="number"
-      name="creditos"
-      placeholder="Creditos: "
-      id="creditos"
-      class="form-control text-black" required
-    />
+    <input type="text" name="creditos" placeholder="Creditos: " id="creditos" class="form-control text-black"/>
+    <i id="iconCre" class="fa-solid fa-circle-xmark icon-red"></i>
+    <i id="iconCre2" class="fa fa-check-circle icon-green"></i>
   </div>
-  <br />
-  <div>
+    <span id="creditError" class="text-danger"></span>
+  <br>
+
+
+  <div class="input-container">
     <label class="dato" for="horas">Ingrese las horas: </label>
-    <input type="number" name="horas" placeholder="Horas: " id="horas"
-    class="form-control text-black" required/>
+    <input type="text" name="horas" placeholder="Horas: " id="horas" class="form-control text-black"/>
+    <i id="iconHrs" class="fa-solid fa-circle-xmark icon-red"></i>
+    <i id="iconHrs2" class="fa fa-check-circle icon-green"></i>
   </div>
-  <br />
+    <span id="hrsError" class="text-danger"></span>
+  <br>
+  <br>
+
   <button class="btn" id="agr">Agregar <i class="fa-solid fa-file-circle-plus"></i></button>
 </form>
 <br>
 </div>
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const nombre = document.getElementById('nombre');
+    const creditos = document.getElementById('creditos');
+    const horas = document.getElementById('horas');
+    const nombreError = document.getElementById('nombreError');
+    const creditError = document.getElementById('creditError');
+    const hrsError = document.getElementById('hrsError');
+    const inputIcon = document.getElementById('inputIcon');
+    const inputIcon2 = document.getElementById('inputIcon2');
+    const iconCre = document.getElementById('iconCre');
+    const iconCre2 = document.getElementById('iconCre2');
+    const iconHrs = document.getElementById('iconHrs');
+    const iconHrs2 = document.getElementById('iconHrs2');
+
+    let validacionActiva = false;
+
+    function verificarNombre() {
+        const nombreValido = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ 0-9\s]*$/;
+        const nomValido = nombreValido.test(nombre.value);
+
+        if (!nomValido) {
+            nombre.classList.add('invalid');
+            nombre.classList.remove('valid');
+            nombreError.textContent = 'El nombre solo puede contener letras, numeros y espacios';
+            inputIcon2.classList.remove('icon-green');
+            inputIcon.classList.add('icon-red');
+            validacionActiva = true;
+            inputIcon.style.display = 'inline-block';
+        } else {
+            nombre.classList.remove('invalid');
+            nombre.classList.add('valid');
+            nombreError.textContent = '';
+            inputIcon.classList.remove('icon-red');
+            inputIcon2.classList.add('icon-green');
+            inputIcon2.style.display = 'inline-block';
+            validacionActiva = false;
+        }
+
+        if (nombre.value.trim() === '') {
+            inputIcon.style.display = 'none';
+            inputIcon2.style.display = 'none';
+        } else {
+
+        if (validacionActiva) {
+            inputIcon.style.display = 'inline-block';
+            inputIcon2.style.display = 'none';
+        } else {
+            inputIcon.style.display = 'none';
+            inputIcon2.style.display = 'inline-block'; 
+        }
+        }  
+    } 
+
+
+    function verificarCreditos() {
+      const creditValido = /^[0-9]*$/;
+      const inputValue = creditos.value.trim();
+
+      if (inputValue === '') {
+          creditos.classList.remove('invalid');
+          creditos.classList.remove('valid');
+          creditError.textContent = '';
+          iconCre.style.display = 'none';
+          iconCre2.style.display = 'none';
+      } else {
+
+        const creValido = creditValido.test(inputValue);
+        const numInputValue = Number(inputValue);
+
+        if (numInputValue === 0) {
+            creditos.classList.add('invalid');
+            creditos.classList.remove('valid');
+            creditError.textContent = 'El valor de los créditos debe ser mayor a 0';
+            iconCre2.classList.remove('icon-green');
+            iconCre.classList.add('icon-red');
+            iconCre.style.display = 'inline-block';
+        } else if (!creValido) {
+            creditos.classList.add('invalid');
+            creditos.classList.remove('valid');
+            creditError.textContent = 'Este campo solo puede contener números positivos';
+            iconCre2.classList.remove('icon-green');
+            iconCre.classList.add('icon-red');
+            iconCre.style.display = 'inline-block';
+        } else {
+            creditos.classList.remove('invalid');
+            creditos.classList.add('valid');
+            creditError.textContent = '';
+            iconCre.classList.remove('icon-red');
+            iconCre2.classList.add('icon-green');
+            iconCre2.style.display = 'inline-block';
+        }
+        }
+    }
+
+
+function verificarHoras() {
+      const HoraValida = /^[0-9]*$/;
+      const inputValue = horas.value.trim();
+
+      if (inputValue === '') {
+          horas.classList.remove('invalid');
+          horas.classList.remove('valid');
+          creditError.textContent = '';
+          iconHrs.style.display = 'none';
+          iconHrs2.style.display = 'none';
+      } else {
+
+        const hrValida = HoraValida.test(inputValue);
+        const numInputValue = Number(inputValue);
+
+        if (numInputValue === 0) {
+            horas.classList.add('invalid');
+            horas.classList.remove('valid');
+            hrsError.textContent = 'El valor de los horas debe ser mayor a 0';
+            iconHrs2.classList.remove('icon-green');
+            iconHrs.classList.add('icon-red');
+            iconHrs.style.display = 'inline-block';
+        } else if (!hrValida) {
+            horas.classList.add('invalid');
+            horas.classList.remove('valid');
+            hrsError.textContent = 'Este campo solo puede contener números positivos';
+            iconHrs2.classList.remove('icon-green');
+            iconHrs.classList.add('icon-red');
+            iconHrs.style.display = 'inline-block';
+        } else {
+            horas.classList.remove('invalid');
+            horas.classList.add('valid');
+            hrsError.textContent = '';
+            iconHrs.classList.remove('icon-red');
+            iconHrs2.classList.add('icon-green');
+            iconHrs2.style.display = 'inline-block';
+        }
+        }
+    }
+
+
+    nombre.addEventListener('input', verificarNombre);
+    creditos.addEventListener('input', verificarCreditos);
+    horas.addEventListener('input', verificarHoras);
+
+    verificarNombre();
+    verificarCreditos();
+    verificarHoras();
+
+  });
+
+  //Validaciones para campos vacios 
+
+  const btnAgregar = document.getElementById('agr');
+
+    btnAgregar.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    if (nombre.value.trim() === '') {
+    nombre.classList.add('invalid');
+    nombreError.textContent = 'Este campo es obligatorio';
+    } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ 0-9\s]*$/.test(nombre.value)) {
+    nombre.classList.add('invalid');
+    nombreError.textContent = 'El nombre no puede llevar guiones, puntos ni caracteres especiales';
+    } else {
+    nombre.classList.remove('invalid');
+    nombreError.textContent = '';
+    }
+
+
+    if (creditos.value.trim() === '') {
+    creditos.classList.add('invalid');
+    creditError.textContent = 'Este campo es obligatorio';
+    } else if (Number(creditos.value) === 0) {
+    creditos.classList.add('invalid');
+    creditError.textContent = 'Los creditos deben tener un valor mayor a 0';
+    } else if (!/^[0-9]*$/.test(creditos.value)) {
+    creditos.classList.add('invalid');
+    creditError.textContent = 'Los creditos no pueden llevar letras, guiones, puntos ni caracteres especiales';
+    } else {
+    creditos.classList.remove('invalid');
+    creditError.textContent = '';
+    }
+
+
+    if (horas.value.trim() === '') {
+    horas.classList.add('invalid');
+    hrsError.textContent = 'Este campo es obligatorio';
+    } else if (Number(horas.value) === 0) {
+    horas.classList.add('invalid');
+    hrsError.textContent = 'Las horas deben tener un valor mayor a 0';
+    } else if (!/^[0-9]*$/.test(horas.value)) {
+    horas.classList.add('invalid');
+    hrsError.textContent = 'Las horas no pueden llevar letras, guiones, puntos ni caracteres especiales';
+    } else {
+    horas.classList.remove('invalid');
+    hrsError.textContent = '';
+    }
+
+    if (nombre.value.trim() !== '' && /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ 0-9\s]*$/.test(nombre.value) && creditos.value.trim() !== '' && /^[0-9]*$/.test(creditos.value) && Number(creditos.value) != 0 
+    && /^[0-9]*$/.test(horas.value) && Number(horas.value) != 0) {
+        document.querySelector('.formulario').submit();
+    }
+
+  });
+
+</script>
