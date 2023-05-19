@@ -707,6 +707,14 @@ p {
   position: relative;
 }
 
+/*#Colum{
+  background-color: #17ad37;
+}
+
+#Colum > th{
+  color: #fff;
+}*/
+
 #inputIcon {
   position: absolute;
   top: 50%;
@@ -812,6 +820,54 @@ p {
 }
 
 #iconHrs2 {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#rfcIcon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#rfcIcon2 {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#iconPro {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#iconPro2 {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#iconNum {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(50%);
+  line-height: 1;
+}
+
+#iconNum2 {
   position: absolute;
   top: 50%;
   right: 10px;
@@ -1360,10 +1416,6 @@ p {
     height: 45px;
     text-align: center;
   }
-
-  /*.redes-container ul li a {
-    background-color: #e91e63;
-  }*/
   
   .cen{
     margin: 0;

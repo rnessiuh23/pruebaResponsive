@@ -5,7 +5,7 @@
 <script>
     $(document).ready(function() {
       $('#tabla-asignaturas').DataTable({
-        "scrollY": "800px",
+        "scrollY": "600px",
         "scrollCollapse": true,
         "paging": true,
       });
@@ -14,10 +14,10 @@
 
 {{#if asignatura}}
   <br />
-  <div class="table-responsive"></div>
+  <div class="table-responsive">
   <table class="table table-bordered" id="tabla-asignaturas">
     <thead>
-      <tr class="text-center">
+      <tr class="text-center" id="Colum">
         <th class="dato">Id.</th>
         <th class="dato">Nombre</th>
         <th class="dato">Creditos</th>

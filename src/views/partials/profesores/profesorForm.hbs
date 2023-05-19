@@ -2,62 +2,622 @@
 <h3 class="titulo">Alta para profesores</h3>
 <form action="/profesor/agregar" method="POST" class="formulario">
 <br>
-    <div>
+    <div class="input-container">
         <label for="rfc" class="dato">Introduzca su RFC: </label>
-        <input type="text" name="rfc" placeholder="RFC:" id="rfc"
-        class="form-control text-black" autofocus required>
+        <input type="text" name="rfc" placeholder="RFC:" id="rfc" class="form-control text-black" autofocus>
+        <i id="rfcIcon" class="fa-solid fa-circle-xmark icon-red"></i>
+        <i id="rfcIcon2" class="fa fa-check-circle icon-green"></i>
     </div>
+    <span id="rfcError" class="text-danger"></span>
     <br>
-    <div>
+
+
+    <div class="input-container">
         <label for="nombres" class="dato">Introduzca un nombre: </label>
-        <input type="text" name="nombres" placeholder="Ej. Juan Antonio:" id="nombres" 
-        class="form-control text-black" required>
+        <input type="text" name="nombres" placeholder="Ej. Juan Antonio:" id="nombres" class="form-control text-black">
+        <i id="inputIcon" class="fa-solid fa-circle-xmark icon-red"></i>
+        <i id="inputIcon2" class="fa fa-check-circle icon-green"></i>
     </div>
+    <span id="nombreError" class="text-danger"></span>
     <br>
-    <div>
+
+
+    <div class="input-container">
         <label for="paterno" class="dato">Apellido paterno: </label>
-        <input type="text" name="paterno" placeholder="Primer apellido:" id="paterno" 
-        class="form-control text-black" required>
+        <input type="text" name="paterno" placeholder="Primer apellido:" id="paterno" class="form-control text-black">
+        <i id="iconPat" class="fa-solid fa-circle-xmark icon-red"></i>
+        <i id="iconPat2" class="fa-solid fa-circle-check icon-green"></i>
     </div>
+    <span id="paternoError" class="text-danger"></span>
     <br>
-     <div>
+
+
+     <div class="input-container">
         <label for="materno" class="dato">Apellido materno: </label>
-        <input type="text" name="materno" placeholder="Segundo apellido:" id="materno" 
-        class="form-control text-black" required>
+        <input type="text" name="materno" placeholder="Segundo apellido:" id="materno" class="form-control text-black">
+        <i id="iconMat" class="fas fa-times-circle icon-red"></i>
+        <i id="iconMat2" class="fa-solid fa-circle-check icon-green"></i>
     </div>
+    <span id="maternoError" class="text-danger"></span>
     <br>
-     <div>
+
+
+     <div class="input-container">
         <label for="" class="dato">Fecha de Nacimiento: </label>
         <label for="fechaNacimiento"> </label>
-        <input type="date" name="fechaNacimiento" placeholder="" id="fechaNacimiento" 
-        class="form-control text-black" required>
-        <br>
+        <input type="date" name="fechaNacimiento" placeholder="" id="fechaNacimiento" class="form-control text-black">
     </div>
+    <span id="fechaNacError" class="text-danger"></span>
+    <br>
     
-    <div>
+
+    <div class="input-container">
         <label for="direccion" class="dato">Ingrese su direccion: </label>
-        <input type="text" name="direccion" placeholder="Ej. Colonia Doctores, num 34" id="direccion" 
-        class="form-control text-black" required>
+        <input type="text" name="direccion" placeholder="Ej. Colonia Doctores, num 34" id="direccion" class="form-control text-black">
+        <i id="iconDir" class="fas fa-times-circle icon-red"></i>
+        <i id="iconDir2" class="fa-solid fa-circle-check icon-green"></i>
     </div>
+    <span id="direccionError" class="text-danger"></span>
     <br>
-    <div>
+
+
+    <div class="input-container">
         <label for="celular" class="dato">Ingrese no. celular: </label>
-        <input type="text" name="celular" placeholder="(+55) Numero " id="celular" 
-        class="form-control text-black" required>
+        <input type="text" name="celular" placeholder="(+55) Numero " id="celular" class="form-control text-black">
+        <i id="iconCel" class="fas fa-times-circle icon-red"></i>
+        <i id="iconCel2" class="fa-solid fa-circle-check icon-green"></i>
     </div>
+    <span id="celularError" class="text-danger"></span>
     <br>
-    <div>
+
+
+    <div class="input-container">
         <label for="profesion" class="dato">Especifique profesion: </label>
-        <input type="text" name="profesion" placeholder="Profesion: " id="profesion" 
-        class="form-control text-black" required>
+        <input type="text" name="profesion" placeholder="Profesion: " id="profesion" class="form-control text-black">
+        <i id="iconPro" class="fas fa-times-circle icon-red"></i>
+        <i id="iconPro2" class="fa-solid fa-circle-check icon-green"></i>
     </div>
+    <span id="profesionError" class="text-danger"></span>
     <br>
-    <div>
+
+
+    <div class="input-container">
         <label for="numeroEmpleado" class="dato">Ingrese Num. Empleado: </label>
-        <input type="number" name="numeroEmpleado" placeholder="No. Empleado" id="numeroEmpleado" 
-        class="form-control text-black" required>
+        <input type="text" name="numeroEmpleado" placeholder="No. Empleado" id="numeroEmpleado" class="form-control text-black">
+        <i id="iconNum" class="fa-solid fa-circle-xmark icon-red"></i>
+        <i id="iconNum2" class="fa fa-check-circle icon-green"></i>
     </div>
+    <span id="numError" class="text-danger"></span>
+    <br>
+
     <br>
     <button class="btn" id="agr">Agregar <i class="fa-solid fa-user-check"></i></button>
 </form>
 </div>
+
+<!--Validaciones con JavaScript-->
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        const rfc = document.getElementById('rfc');
+        const nombres = document.getElementById('nombres');
+        const paterno = document.getElementById('paterno');
+        const materno = document.getElementById('materno');
+        const fechaNacimiento = document.getElementById('fechaNacimiento');
+        const direccion = document.getElementById('direccion');
+        const celular = document.getElementById('celular');
+        const profesion = document.getElementById('profesion');
+        const numeroEmpleado = document.getElementById('numeroEmpleado');
+        const rfcError = document.getElementById('rfcError');
+        const nombreError = document.getElementById('nombreError');
+        const paternoError = document.getElementById('paternoError');
+        const maternoError = document.getElementById('maternoError');
+        const fechaNacError = document.getElementById('fechaNacError');
+        const direccionError = document.getElementById('direccionError');
+        const celularError = document.getElementById('celularError');
+        const profesionError = document.getElementById('profesionError');
+        const numError = document.getElementById('numError');
+        const rfcIcon = document.getElementById('rfcIcon');
+        const rfcIcon2 = document.getElementById('rfcIcon2');
+        const inputIcon = document.getElementById('inputIcon');
+        const inputIcon2 = document.getElementById('inputIcon2');
+        const iconPat = document.getElementById('iconPat');
+        const iconPat2 = document.getElementById('iconPat2');
+        const iconMat = document.getElementById('iconMat');
+        const iconMat2 = document.getElementById('iconMat2');
+        const iconDir = document.getElementById('iconDir');
+        const iconDir2 = document.getElementById('iconDir2');
+        const iconCel = document.getElementById('iconCel');
+        const iconCel2 = document.getElementById('iconCel2');
+        const iconPro = document.getElementById('iconPro');
+        const iconPro2 = document.getElementById('iconPro2');
+        const iconNum = document.getElementById('iconNum');
+        const iconNum2 = document.getElementById('iconNum2');
+
+
+        function verificarRFC() {
+        const rfcValido = /^[A-Z 0-9\s]*$/;
+        const rfcValid = rfcValido.test(rfc.value);
+
+        if (!rfcValid) {
+            rfc.classList.add('invalid');
+            rfc.classList.remove('valid');
+            rfcError.textContent = 'El RFC solo puede contener letras mayusculas, numeros y espacios';
+            rfcIcon2.classList.remove('icon-green');
+            rfcIcon.classList.add('icon-red');
+            rfcIcon.style.display = 'inline-block';
+            rfcIcon2.style.display = 'none';
+        } else if(rfc.value.length > 13){
+            rfc.classList.add('invalid');
+            rfc.classList.remove('valid');
+            rfcError.textContent = 'El RFC no puede contener mas de 13 digitos';
+            rfcIcon2.classList.remove('icon-green');
+            rfcIcon.classList.add('icon-red');
+            rfcIcon.style.display = 'inline-block';
+            rfcIcon2.style.display = 'none';
+        } else {
+            rfc.classList.remove('invalid');
+            rfc.classList.add('valid');
+            rfcError.textContent = '';
+            rfcIcon.classList.remove('icon-red');
+            rfcIcon2.classList.add('icon-green');
+            rfcIcon2.style.display = 'inline-block';
+            rfcIcon.style.display = 'none';
+        }
+
+        if (rfc.value.trim() === '') {
+            rfcIcon.style.display = 'none';
+            rfcIcon2.style.display = 'none';
+        }
+    }
+
+
+    function verificarNombre() {
+        const nombreValido = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/;
+        const nomValido = nombreValido.test(nombres.value);
+
+        if (!nomValido) {
+            nombres.classList.add('invalid');
+            nombres.classList.remove('valid');
+            nombreError.textContent = 'El nombre solo puede contener letras y espacios';
+            inputIcon2.classList.remove('icon-green');
+            inputIcon.classList.add('icon-red');
+            inputIcon.style.display = 'inline-block';
+            inputIcon2.style.display = 'none';
+        } else {
+            nombres.classList.remove('invalid');
+            nombres.classList.add('valid');
+            nombreError.textContent = '';
+            inputIcon.classList.remove('icon-red');
+            inputIcon2.classList.add('icon-green');
+            inputIcon2.style.display = 'inline-block';
+            inputIcon.style.display = 'none';
+        }
+
+        if (nombres.value.trim() === '') {
+            inputIcon.style.display = 'none';
+            inputIcon2.style.display = 'none';
+        } 
+    }
+
+
+    function verificarPaterno() {
+            const paternoValido = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/;
+            const patValido = paternoValido.test(event.target.value);
+
+            if (!patValido) {
+                paterno.classList.add('invalid');
+                paterno.classList.remove('valid');
+                paternoError.textContent = 'Los apellidos solo pueden contener letras y espacios';
+                iconPat2.classList.remove('icon-green');
+                iconPat.classList.add('icon-red');
+                iconPat2.style.display = 'none';
+            } else {
+                paterno.classList.remove('invalid');
+                paterno.classList.add('valid');
+                paternoError.textContent = '';
+                iconPat.classList.remove('icon-red');
+                iconPat2.classList.add('icon-green');
+                iconPat2.style.display = 'inline-block';
+            }
+
+            if (paterno.value.trim() === '') {
+                iconPat.style.display = 'none';
+                iconPat2.style.display = 'none'; 
+            } else {
+            if (patValido) {
+                iconPat.style.display = 'none';
+                iconPat2.style.display = 'inline-block';
+            } else {
+                iconPat.style.display = 'inline-block';
+                iconPat2.style.display = 'none';
+            }
+        }
+    }
+
+
+    function verificarMaterno() {
+            const maternoValido = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/;
+            const matValido = maternoValido.test(event.target.value);
+
+            if (!matValido) {
+                materno.classList.add('invalid');
+                materno.classList.remove('valid');
+                maternoError.textContent = 'Los apellidos solo pueden contener letras y espacios';
+                iconMat2.classList.remove('icon-green');
+                iconMat.classList.add('icon-red');
+                iconMat2.style.display = 'none';
+            } else {
+                materno.classList.remove('invalid');
+                materno.classList.add('valid');
+                maternoError.textContent = '';
+                iconMat.classList.remove('icon-red');
+                iconMat2.classList.add('icon-green');
+                iconMat2.style.display = 'inline-block';
+            }
+
+            if (materno.value.trim() === '') {
+                iconMat.style.display = 'none';
+                iconMat2.style.display = 'none';
+            } else {
+            if (matValido) {
+                iconMat.style.display = 'none';
+                iconMat2.style.display = 'inline-block';
+            } else {
+                iconMat.style.display = 'inline-block';
+                iconMat2.style.display = 'none';
+            }
+        }
+    }
+
+
+    fechaNacimiento.addEventListener('change', (event) => {
+            const fecha = new Date(event.target.value);
+            const anio = fecha.getFullYear();
+            if (anio < 1960) {
+            fechaNacimiento.classList.add('invalid');
+            fechaNacimiento.classList.remove('valid');
+            fechaNacError.textContent = 'El año de nacimiento no puede ser menor a 1960';
+            } else if (anio > 2005) {
+            fechaNacimiento.classList.add('invalid');
+            fechaNacimiento.classList.remove('valid');
+            fechaNacError.textContent = 'El año de nacimiento no puede ser mayor a 2005';
+            } else {
+            fechaNacimiento.classList.remove('invalid');
+            fechaNacimiento.classList.add('valid');
+            fechaNacError.textContent = '';
+            }
+        });
+
+        fechaNacimiento.addEventListener('focus', () => {
+        if (fechaNacimiento.classList.contains('invalid')) {
+            fechaNacimiento.classList.remove('invalid');
+            fechaNacimiento.classList.add('valid');
+        }
+        });
+
+
+    function verificarDireccion() {
+        const direccionValida = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s 0-9 ,]*$/;
+        const dirValida = direccionValida.test(event.target.value);
+
+        if (!dirValida) {
+            direccion.classList.add('invalid');
+            direccion.classList.remove('valid');
+            direccionError.textContent = 'La direccion solo puede contener letras, numeros, espacios y comas';
+            iconDir2.classList.remove('icon-green');
+            iconDir.classList.add('icon-red');
+            iconDir2.style.display = 'none';
+        } else {
+            direccion.classList.remove('invalid');
+            direccion.classList.add('valid');
+            direccionError.textContent = '';
+            iconDir.classList.remove('icon-red');
+            iconDir2.classList.add('icon-green');
+            iconDir2.style.display = 'inline-block';
+        }
+
+        if (direccion.value.trim() === '') {
+            iconDir.style.display = 'none';
+            iconDir2.style.display = 'none';
+        } else {
+            if (dirValida) {
+                iconDir.style.display = 'none';
+                iconDir2.style.display = 'inline-block';
+            } else {
+                iconDir.style.display = 'inline-block';
+                iconDir2.style.display = 'none';
+            }
+        }
+    }
+
+
+    function verificarCelular() {
+        const celularValido = /^[0-9]*$/;
+        const celValido = celularValido.test(celular.value);
+
+        if (!celValido) {
+            celular.classList.add('invalid');
+            celular.classList.remove('valid');
+            celularError.textContent = 'El celular solo puede contener numeros';
+            iconCel2.classList.remove('icon-green');
+            iconCel.classList.add('icon-red');
+            iconCel2.style.display = 'none';
+        } else if (celular.value.length > 10) {
+            celular.classList.add('invalid');
+            celular.classList.remove('valid');
+            celularError.textContent = 'El celular no puede tener una longitud mayor a 10 dígitos';
+            iconCel2.classList.remove('icon-green');
+            iconCel.classList.add('icon-red');
+            iconCel2.style.display = 'none';
+        } else {
+            celular.classList.remove('invalid');
+            celular.classList.add('valid');
+            celularError.textContent = '';
+            iconCel.classList.remove('icon-red');
+            iconCel2.classList.add('icon-green');
+        }
+
+        if (celular.value.trim() === '') {
+            iconCel.style.display = 'none';
+            iconCel2.style.display = 'none';
+        } else if (celular.value.length > 10) {
+            iconCel.style.display = 'inline-block';
+            iconCel2.style.display = 'none';
+            const inputElement = document.getElementById('celular');
+            const iconCelElement = document.getElementById('iconCel');
+            inputElement.parentNode.insertBefore(iconCelElement, inputElement.nextSibling);
+        } else {
+            if (celValido) {
+            iconCel.style.display = 'none';
+            iconCel2.style.display = 'inline-block';
+            } else {
+            iconCel.style.display = 'inline-block';
+            iconCel2.style.display = 'none';
+            }
+        }
+    }
+
+
+    function verificarProfesion() {
+        const profesionValida = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/;
+        const proValida = profesionValida.test(event.target.value);
+
+        if (!proValida) {
+            profesion.classList.add('invalid');
+            profesion.classList.remove('valid');
+            profesionError.textContent = 'La profesion solo puede contener letras y espacios';
+            iconPro2.classList.remove('icon-green');
+            iconPro.classList.add('icon-red');
+            iconPro2.style.display = 'none';
+        } else {
+            profesion.classList.remove('invalid');
+            profesion.classList.add('valid');
+            profesionError.textContent = '';
+            iconPro.classList.remove('icon-red');
+            iconPro2.classList.add('icon-green');
+            iconPro2.style.display = 'inline-block';
+        }
+
+        if (profesion.value.trim() === '') {
+            iconPro.style.display = 'none';
+            iconPro2.style.display = 'none';
+        }
+    }
+
+
+    function verificarNumero() {
+      const numeValido = /^[0-9]*$/;
+      const inputValue = numeroEmpleado.value.trim();
+
+      if (inputValue === '') {
+          numeroEmpleado.classList.remove('invalid');
+          numeroEmpleado.classList.remove('valid');
+          numError.textContent = '';
+          iconNum.style.display = 'none';
+          iconNum2.style.display = 'none';
+      } else {
+
+        const numValido = numeValido.test(inputValue);
+        const numInputValue = Number(inputValue);
+
+        if (numInputValue === 0) {
+            numeroEmpleado.classList.add('invalid');
+            numeroEmpleado.classList.remove('valid');
+            numError.textContent = 'El valor de los créditos debe ser mayor a 0';
+            iconNum2.classList.remove('icon-green');
+            iconNum.classList.add('icon-red');
+            iconNum.style.display = 'inline-block';
+        } else if (!numValido) {
+            numeroEmpleado.classList.add('invalid');
+            numeroEmpleado.classList.remove('valid');
+            numError.textContent = 'Este campo solo puede contener números positivos';
+            iconNum2.classList.remove('icon-green');
+            iconNum.classList.add('icon-red');
+            iconNum.style.display = 'inline-block';
+        } else {
+            numeroEmpleado.classList.remove('invalid');
+            numeroEmpleado.classList.add('valid');
+            numError.textContent = '';
+            iconNum.classList.remove('icon-red');
+            iconNum2.classList.add('icon-green');
+            iconNum2.style.display = 'inline-block';
+        }
+        }
+    }
+
+
+        rfc.addEventListener('input', verificarRFC);
+        nombres.addEventListener('input', verificarNombre);
+        paterno.addEventListener('input', verificarPaterno);
+        materno.addEventListener('input', verificarMaterno);
+        direccion.addEventListener('input', verificarDireccion);
+        celular.addEventListener('input', verificarCelular);
+        profesion.addEventListener('input', verificarProfesion);
+        numeroEmpleado.addEventListener('input', verificarNumero);
+
+
+        verificarRFC();
+        verificarNombre();
+        verificarPaterno();
+        verificarMaterno();
+        verificarDireccion();
+        verificarCelular();
+        verificarProfesion();
+        verificarNumero();
+
+    });    
+
+
+//Validaciones para campos vacios
+
+    const btnAgregar = document.getElementById('agr');
+
+    btnAgregar.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    if (rfc.value.trim() === '') {
+    rfc.classList.add('invalid');
+    rfcError.textContent = 'Este campo es obligatorio';
+    } else if (!/^[A-Z 0-9\s]*$/.test(rfc.value)) {
+    rfc.classList.add('invalid');
+    rfcError.textContent = 'El RFC no puede llevar letras minusculas ni caracteres especiales';
+    } else if (rfc.value.length > 13) {
+    rfc.classList.add('invalid');
+    rfcError.textContent = 'El RFC no puede tener mas de 13 digitos';
+    } else if (rfc.value.length < 13) {
+    rfc.classList.add('invalid');
+    rfcError.textContent = 'El RFC no puede tener menos de 13 digitos';
+    } else {
+    rfc.classList.remove('invalid');
+    rfcError.textContent = '';
+    }
+
+
+    if (nombres.value.trim() === '') {
+    nombres.classList.add('invalid');
+    nombreError.textContent = 'Este campo es obligatorio';
+    } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/.test(nombres.value)) {
+    nombres.classList.add('invalid');
+    nombreError.textContent = 'El nombre no puede llevar numeros ni caracteres especiales';
+    } else {
+    nombres.classList.remove('invalid');
+    nombreError.textContent = '';
+    }
+
+
+    if (paterno.value.trim() === '') {
+        paterno.classList.add('invalid');
+        paternoError.textContent = 'Este campo es obligatorio';
+    } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/.test(paterno.value)) {
+        paterno.classList.add('invalid');
+        paternoError.textContent = 'Los apellidos no pueden llevar numeros ni caracteres especiales';
+    } else {
+        paterno.classList.remove('invalid');
+        paternoError.textContent = '';
+    }
+
+
+    if (materno.value.trim() === '') {
+        materno.classList.add('invalid');
+        maternoError.textContent = 'Este campo es obligatorio';
+    } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/.test(materno.value)) {
+        materno.classList.add('invalid');
+        maternoError.textContent = 'Los apellidos no pueden llevar numeros ni caracteres especiales';
+    } else {
+        materno.classList.remove('invalid');
+        maternoError.textContent = '';
+    }
+
+
+    if (fechaNacimiento.value.trim() === '') {
+        fechaNacimiento.classList.add('invalid');
+        fechaNacError.textContent = 'Este campo es obligatorio';
+    } else if (fechaNacimiento.classList.contains('invalid')) {
+        fechaNacError.textContent = ('Por favor, ingresa una fecha de nacimiento válida.');
+    } else {
+        fechaNacimiento.classList.remove('invalid');
+        fechaNacError.textContent = '';
+    }
+
+
+    if (direccion.value.trim() === '') {
+        direccion.classList.add('invalid');
+        direccionError.textContent = 'Este campo es obligatorio';
+    } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s 0-9 ,]*$/.test(direccion.value)) {
+        direccion.classList.add('invalid');
+        direccionError.textContent = 'La direccion no puede llevar guiones, puntos ni caracteres especiales';
+    } else {
+        direccion.classList.remove('invalid');
+        direccionError.textContent = '';
+    }
+
+
+    if (celular.value.trim() === '') {
+        celular.classList.add('invalid');
+        celularError.textContent = 'Este campo es obligatorio';
+    } else if (!/^[0-9]*$/.test(celular.value)) {
+        celular.classList.add('invalid');
+        celularError.textContent = 'El celular no puede llevar letras ni caracteres especiales';
+    } else if (celular.value.length < 10) {
+        iconCel.style.display = 'inline-block';
+        iconCel2.style.display = 'none';
+        
+        const inputElement = document.getElementById('celular');
+        const iconCelElement = document.getElementById('iconCel');
+        inputElement.parentNode.insertBefore(iconCelElement, inputElement.nextSibling);
+
+        celular.classList.add('invalid');
+        celularError.textContent = 'El celular no puede tener una longitud menor a 10 dígitos';
+        iconCel2.classList.remove('icon-green');
+        iconCel.classList.add('icon-red');
+    
+    } else {
+        celular.classList.remove('invalid');
+        celularError.textContent = '';
+    }
+    if (celular.value.trim() === '') {    
+    }
+
+
+    if (profesion.value.trim() === '') {
+        profesion.classList.add('invalid');
+        profesionError.textContent = 'Este campo es obligatorio';
+    } else if (!/^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/.test(profesion.value)) {
+        profesion.classList.add('invalid');
+        profesionError.textContent = 'La profesion no puede llevar numeros ni caracteres especiales';
+    } else {
+        profesion.classList.remove('invalid');
+        profesionError.textContent = '';
+    }
+
+
+    if (numeroEmpleado.value.trim() === '') {
+    numeroEmpleado.classList.add('invalid');
+    numError.textContent = 'Este campo es obligatorio';
+    } else if (Number(numeroEmpleado.value) === 0) {
+    numeroEmpleado.classList.add('invalid');
+    numError.textContent = 'Los creditos deben tener un valor mayor a 0';
+    } else if (!/^[0-9]*$/.test(numeroEmpleado.value)) {
+    numeroEmpleado.classList.add('invalid');
+    numError.textContent = 'Los creditos no pueden llevar letras, guiones, puntos ni caracteres especiales';
+    } else {
+    numeroEmpleado.classList.remove('invalid');
+    numError.textContent = '';
+    }
+
+
+    if (rfc.value.trim() !== '' && /^[A-Z 0-9\s]*$/.test(rfc.value) && rfc.value.length === 13 && nombres.value.trim() !== '' && /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/.test(nombres.value)
+    && paterno.value.trim() !== '' && /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/.test(paterno.value) && materno.value.trim() !== '' && /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/.test(materno.value) 
+    && !fechaNacimiento.classList.contains('invalid') && direccion.value.trim() !== '' && /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s 0-9 ,]*$/.test(direccion.value) && celular.value.trim() !== '' 
+    && /^[0-9]*$/.test(celular.value) && celular.value.length === 10 && profesion.value.trim() !== '' && /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ\s]*$/.test(profesion.value) 
+    && numeroEmpleado.value.trim() !== '' && /^[0-9]*$/.test(numeroEmpleado.value) && Number(numeroEmpleado.value) != 0) {
+        document.querySelector('.formulario').submit();
+    }
+
+});    
+
+
+</script>
