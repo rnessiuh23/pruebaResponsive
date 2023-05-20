@@ -89,9 +89,13 @@ nav {
 
 /*Creacion de las opciones de la clase 'sexo'*/
 
-.formulario .radio label {
+.radio input[type="radio"] {
+  display: none;
+}
+
+.radio label {
   color: black;
-  padding: 5px 15px 5px 20px;
+  padding: 5px 15px 5px 48px;
   display: inline-block;
   position: relative;
   font-size: 1em;
@@ -102,20 +106,38 @@ nav {
   transition: all 0.3s ease;
 }
 
-.formulario input[type="radio"]:checked + label {
+.radio label:hover {
+  background-color: rgba(23, 173, 55, 0.3)
+}
+
+.radio label:before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  background: none;
+  border: 3px solid #15803d;
+  border-radius: 50%;
+  position: absolute;
+  left: 17px;
+  top: 11px;
+}
+
+input[type="radio"]:checked + label {
   padding: 5px 15px;
   background: #17ad37;
   border-radius: 3px;
   color: #fff;
 }
 
-.formulario input[type="radio"]:checked + label:before {
+input[type="radio"]:checked + label:before {
   display: none;
 }
 
-.formulario .radio #Fem {
-  margin-left: 20px;
+.radio .opcion-femenino {
+    margin-left: 12px;
 }
+
 
 #tabla {
   border-color: white;
@@ -714,6 +736,12 @@ p {
 #Colum > th{
   color: #fff;
 }*/
+
+.table-responsive{
+  border-radius: 3%;
+}
+
+
 
 #inputIcon {
   position: absolute;

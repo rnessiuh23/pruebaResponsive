@@ -43,13 +43,14 @@
     <label for="" class="dato">Seleccione un sexo: </label>
     <div class="radio">
         <input type="radio" name="sexo" value="Masculino" id="Masc">
-        <label for="masculino">Masculino</label>
+        <label for="Masc" onclick="seleccionarSexo('Masc')">Masculino</label>
 
         <input type="radio" name="sexo" value="Femenino" id="Fem">
-        <label for="femenino">Femenino</label><br>
-        <span id="sexoError" class="text-danger"></span>
+        <label class="opcion-femenino" for="Fem" onclick="seleccionarSexo('Fem')">Femenino</label><br>
+    <span id="sexoError" class="text-danger"></span>
     </div>
     <br>
+
     
     <div class="input-container">
         <label for="celular" class="dato">Ingrese Tel. Celular: </label>
@@ -74,6 +75,16 @@
     <button class="btn" id="agr">Agregar <i class="fa-solid fa-user-check"></i></button>
 </form>
 </div>
+
+
+<!--Script para hacer animaciones en los radio buttons-->
+
+<script>
+function seleccionarSexo(id) {
+    var radio = document.getElementById(id);
+    radio.checked = true;
+}
+</script>
 
 <!--Validaciones con JavaScript-->
 
