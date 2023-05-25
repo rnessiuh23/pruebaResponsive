@@ -4,6 +4,8 @@ body {
   background-size: 100%;
   background-attachment: fixed;
   position: relative;
+  transform: rotate(0deg); /* Mantener la rotación en 0 grados */
+  transform-origin: center; /* Definir el origen de la rotación en el centro */
 }
 
 .bg-black {
