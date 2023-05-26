@@ -1847,6 +1847,33 @@ p {
     margin-left: -14%;
   }
 
+  #volver {
+    background: linear-gradient(180deg, #f59e0b 0%, #fbc400 100%);
+    transition: all 0.3s;
+    color: white;
+    border-radius: 5px;
+    border-color: #fbc400;
+    margin-left: 45px;
+    width: 100px;
+    position: relative;
+  }
+
+  #editAlum {
+    background-color: rgb(255, 255, 255, 0.8);
+    border-radius: 20px;
+    position: absolute;
+  }
+
+}
+
+@media only screen and (max-width: 430px) and (max-height: 850px){
+
+  #redes {
+    margin-top: -8%;
+    margin-left: -26%;
+    width: 120%;
+  }
+
 }
 
 @media only screen and (max-width: 420px) and (max-height: 930px){
@@ -2590,6 +2617,17 @@ p {
     background-color: #f767d8;
   }*/
 
+  #volver {
+    background: linear-gradient(180deg, #f59e0b 0%, #fbc400 100%);
+    transition: all 0.3s;
+    color: white;
+    border-radius: 5px;
+    border-color: #fbc400;
+    margin-left: 40px;
+    width: 100px;
+    position: relative;
+  } 
+
 }
 
 @media only screen and (max-width: 360px) and (max-height: 650px){
@@ -2784,6 +2822,17 @@ p {
     margin-top: 4%;
     width: 105%;
     margin-left: 29%;
+  }
+
+  #volver {
+    background: linear-gradient(180deg, #f59e0b 0%, #fbc400 100%);
+    transition: all 0.3s;
+    color: white;
+    border-radius: 5px;
+    border-color: #fbc400;
+    margin-left: 10px;
+    width: 100px;
+    position: relative;
   }
 
 }
