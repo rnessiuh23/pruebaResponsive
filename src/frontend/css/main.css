@@ -2697,6 +2697,13 @@ p {
 
 @media only screen and (max-width: 360px) and (max-height: 600px){
 
+  #pro {
+    font-size: 21px;
+    width: 70vw;
+    height: 0vh;
+    margin-top: -1%;
+  }
+
   #opci2 {
     height: 48%;
     margin-top: 20%;
@@ -2717,7 +2724,7 @@ p {
 
   .redes-container {
     margin-top: -39%;
-    margin-left: -75%;
+    margin-left: -24%;
   }
 
   #phone {
